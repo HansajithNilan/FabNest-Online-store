@@ -1,0 +1,97 @@
+*{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/* UserRegister.css */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .Rpage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://i.etsystatic.com/14319357/r/il/1a0f9e/5527243028/il_570xN.5527243028_csg6.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150vh;
+  }
+  
+  .RegBox {
+    background-color:rgba(189, 189, 189, 0.3); /* Semi-transparent black */
+    border-radius: 10px;
+    padding: 30px 40px;
+    width: 400px;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 15vh;
+  }
+  
+  .RegBox h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .RegBox p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .RegBox p a {
+    color: #00bcd4;
+    text-decoration: none;
+  }
+  
+  .RegBox p a:hover {
+    text-decoration: underline;
+  }
+  
+  .RegBox form {
+    text-align: left;
+    margin: 20px 0;
+  }
+  
+  .RegBox label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .RegBox input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .RegBox input:focus {
+    background-color: rgba(255, 255, 255, 0.185);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.185);
+  }
+  
+  .RegBox button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.185);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .RegBox button:hover {
+    background-color: rgba(255, 255, 255, 0.103);;
+  }
+  
+  
+  
