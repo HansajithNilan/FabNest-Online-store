@@ -4,10 +4,10 @@ import './Footer.css';
 function Footer() {
   return (
     <div className="Footer">
-      <div className="logo">
+      <div className="logofooter">
         <h1>FabNest</h1>
       </div>
-      <div className="support">
+      <div className="supportline">
         <h1>Support</h1>
     <ul>
         <li>Contact Us</li>
@@ -16,7 +16,7 @@ function Footer() {
         <li>Email</li>
     </ul>
       </div>
-      <div className="followus">
+      <div className="followusline">
       <h1>Follow Us</h1>
     <ul>
         <li>Facbook</li>

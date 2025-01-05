@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mogra&display=swap");
 
 *{
-    color: white;
+    
 }
 
 .Footer{
@@ -10,59 +10,64 @@
     display:flex ;
     height: 40vh;
 }
-.logo{
+.logofooter{
    margin: auto;
     width: 20%;
     height: 40vh;
-    align-items: center;
+    padding-top: 12vh;
+    
     
 
 }
-.logo h1{
+.logofooter h1{
     font-family: "Mogra", serif;
     font-size: 3rem;
     margin-left: 5vh;
+    color: white;
 
 }
-.support{
+.supportline{
  
     width: 20%;
     
     margin-right: 5%;
     height: 40vh;
 }
-.support h1{
+.supportline h1{
     color: rgb(145, 145, 145);
     font-size: 1.5rem;
     margin-left:10vh ;
     margin-top: 3vh;
 }
-.support ul{
+.supportline ul{
     margin-top: 5vh;
    
 }
-.support ul li{
+.supportline ul li{
     margin-left: 10vh;
     text-align: left;
     margin-bottom: 3.5vh;
     list-style: none;
+    color: white;
+
     
 }
-.followus{
+.followusline{
     width: 20%;
    
     margin-right: 5%;
 }
-.followus h1{
+.followusline h1{
     font-size: 1.5rem;
     color: rgb(145, 145, 145);
     margin-left:10vh ;
     margin-top: 3vh;
 }
-.followus ul{
+.followusline ul{
     margin-top: 5vh;
 }
-.followus ul li{
+.followusline ul li{
+    color: white;
     margin-left: 10vh;
     text-align: left;
     margin-bottom: 3.5vh;
@@ -76,10 +81,12 @@
 
 }
 .contact h1{
+    
     color: rgb(145, 145, 145);
     font-size: 1.5rem;
     margin-top: 3vh;
 }
 .contact h3{
+    color: white;
     margin-top: 5vh;
 }
