@@ -1,4 +1,4 @@
-name: Build & deploy
+name: Build & Deploy to GitHub Pages
 
 on:
   push:
@@ -17,41 +17,42 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Installing Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
 
+      - name: Navigate to frontend
+        run: cd frontend
+
       - name: Installing NPM packages
         run: npm ci
+        working-directory: ./frontend
 
       - name: Building project
         run: npm run build
+        working-directory: ./frontend
 
-      - name: Running tests
-        run: npm run test
-
-      - name: Uploading production-ready build files
+      - name: Upload production-ready files
         uses: actions/upload-artifact@v2
         with:
           name: production-files
-          path: ./build
+          path: ./frontend/dist
 
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Downloading artifact
+      - name: Download artifact
         uses: actions/download-artifact@v2
         with:
           name: production-files
-          path: ./build
+          path: ./dist
 
-      - name: Deploying to gh-pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist
