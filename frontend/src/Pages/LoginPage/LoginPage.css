@@ -1,0 +1,127 @@
+*{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+
+.page {
+    margin: auto;
+    width: 150vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://i.etsystatic.com/14319357/r/il/1a0f9e/5527243028/il_570xN.5527243028_csg6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20vh 0vh 5vh 0vh;
+}
+
+.box {
+    width: 70vh;
+    height: 65vh;
+    background-color: rgba(189, 189, 189, 0.3); /* Use rgba for transparency */
+    margin: auto;
+    border-radius: 1rem;
+    border: 2px solid black;
+    padding: 5vh 0vh 5vh 0vh;
+    border: none;
+}
+
+.center-box {
+    background-color: rgba(189, 189, 189, 0.089);
+    width: 55vh;
+    height: 52vh;
+    margin: auto;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+
+.center-box h1 {
+    margin-top: 1.3rem;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-bottom: 2rem;
+    
+}
+.center-box form{
+    margin-top: 1rem;
+
+}
+.center-box form label{
+   
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    margin-left: 4rem;
+    margin-top: 2rem;
+    
+    
+   
+}
+.center-box form input{
+    background-color: rgba(240, 248, 255, 0);
+    border: 1.5px solid white;
+    border-radius: .5rem;
+    margin-top: .5rem;
+    margin-left: 4rem;
+    width: 18rem;
+    
+    height: 1.7rem;
+    margin-bottom: 1.6rem;
+    
+}
+.center-box button{
+    margin-top: .5rem;
+    width: 18rem;
+    height: 1.8rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.473);
+    color: white;
+    margin-left: 4rem;
+}
+.center-box h3{
+    font-weight:4rem;
+    color: rgb(255, 255, 255);
+    font-size: .8rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    margin-right: 4vh;
+    text-decoration: underline;
+}
+.center-box h2{
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.918);
+    font-size: .7rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-weight: 20;
+}
+.center-box h2 input{
+    margin-right: .5rem;
+}
+.newtotag{
+    margin-top: 2rem;
+    
+}
+.newtotag h1{
+   
+    color: white;
+    font-size: 1rem;
+    font-weight: 10;
+    display: flex;
+    justify-content: center;
+    
+}
+.newtotag button{
+ 
+   background-color: rgba(255, 255, 255, 0.185);
+  border-radius: 1rem;
+  margin-left: 17.5vh;
+  margin-top: 2.7vh;
+  width: 35vh;
+  height: 4vh;
+  border: none;
+ color: white;
+}

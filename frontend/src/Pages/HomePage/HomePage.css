@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Mogra&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.content {
+  margin: auto;
+  width: 150vh;
+  
+  background-color: rgb(237, 237, 237);
+  padding-top: 20vh;
+}
+
+.welcome {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1rem;
+  margin: auto;
+
+  width: 130vh;
+  height: 70vh;
+  background-image: url("../../../public/Images/homepage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.text1 {
+  margin-right: 10vh;
+  display: flex;
+  justify-content: flex-end;
+}
+.text2 {
+  margin-right: 10vh;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.text3 {
+  margin-right: 10vh;
+  display: flex;
+  justify-content: flex-end;
+}
+.text1 h1 {
+  margin-top: 10vh;
+  font-size: 4rem;
+  font-family: "Times New Roman", Times, serif;
+}
+.text2 h1 {
+  margin-top: 0.2rem;
+  font-family: "Mogra", serif;
+  font-size: 4rem;
+}
+.black-box-text {
+  padding: 1.5rem;
+  margin-top: 2.5vh;
+  background-color: rgba(15, 15, 15, 0.658);
+  width: 40vh;
+  height: 20vh;
+
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 1rem;
+
+  /* Align to the right */
+  margin-left: auto;
+  margin-right: 4vh;
+}
+
+.black-box-text p {
+  color: white;
+}
+.secondline {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12vh;
+  margin-bottom: 12vh;
+}
+.shipping {
+    margin-left: 14vh;
+  border-radius: 1rem;
+  width: 20vh;
+  margin-right: 14vh;
+  background-color: rgb(255, 255, 255);
+  height: 20vh;
+}
+.Dilivery {
+  border-radius: 1rem;
+  width: 20vh;
+  margin-right: 14vh;
+  background-color: rgb(255, 255, 255);
+  height: 20vh;
+}
+.active {
+  border-radius: 1rem;
+  width: 20vh;
+  margin-right: 14vh;
+  background-color: rgb(255, 255, 255);
+  height: 20vh;
+}
+.return{
+    margin-right: 14vh;
+  border-radius: 1rem;
+  width: 20vh;
+  height: 20vh;
+  background-color: rgb(255, 255, 255);
+}
+.shipping svg {
+    margin-left: 7vh;
+    margin-top: 6vh;
+    width: 6vh;
+    height: 6vh;
+}
+.shipping h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    margin-top: 1.8vh;
+}
+.Dilivery svg {
+    margin-left: 7vh;
+    margin-top: 6vh;
+    width: 6vh;
+    height: 6vh;
+  }
+  .Dilivery h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    margin-top: 1.8vh;
+  }
+  
+  .active svg {
+    margin-left: 7vh;
+    margin-top: 6vh;
+    width: 6vh;
+    height: 6vh;
+  }
+  .active h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    margin-top: 1.8vh;
+  }
+  .return svg {
+    margin-left: 7vh;
+    margin-top: 6vh;
+    width: 6vh;
+    height: 6vh;
+  }
+  .return h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    margin-top: 1.8vh;
+  }
+  .third-row{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 120vh;
+    height: 50vh;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 4px rgba(97, 97, 97, 0.2),  6px 8px 4px rgba(100, 100, 100, 0.19);
+  }
+  .third-image{
+    margin-left: 10vh;
+    width: 40vh;
+    height: 40vh;
+    
+  }
+  .third-image img {
+    border-radius: 1rem;
+    width: 40vh;
+    height: 40vh;
+    
+  }
+  .third-paragaph{
+    margin-left: 10vh;
+    width: 50vh;
+    height: 30vh;
+    margin-top: 10vh;
+   
+  }
+  .third-paragaph button{
+    background-color: rgb(39, 114, 89);
+    border-radius: .4rem;
+        margin-top: 3vh;
+        width: 13vh;
+        height: 5vh;
+        color: white;
+        border: none;
+  }
+  .third-paragaph button:hover{
+    background-color: aquamarine;
+    color: black;
+    cursor: pointer;
+
+  }
+  .best-selling{
+   margin-top: 10vh;
+
+    
+    width: 130vh;
+    margin-left: 10vh;
+    
+  }
+  .best-selling h1{
+    font-family: "Mogra", serif;
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+  }
+  .best-selling h3{
+    margin-top: 1rem;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+  }
+  .best-selling-cards {
+    width: 130vh;
+    height: 40vh;
+   
+    margin-top: 10vh;
+    display: flex;
+    
+  }
+  .watch{
+    width: 33.3vh;
+    background-color: rgb(104, 153, 138);
+    margin-right: 15vh;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2),  6px 6px 4px rgba(145, 145, 145, 0.19);
+
+
+  }
+  .watch img{
+    width: 33.3vh;
+  }
+  .slippers{
+    width: 33.3vh;
+    background-color: rgb(237, 241, 167);
+    margin-right: 15vh;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2),  6px 6px 4px rgba(145, 145, 145, 0.19);
+
+  }
+  .slippers img{
+    margin-top: 5vh;
+    width: 33.3vh;
+  }
+   .flowerwass{
+    width: 33.3vh;
+    background-color: rgb(133, 198, 252);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2),  6px 6px 4px rgba(145, 145, 145, 0.19);
+
+    
+  }
+  .flowerwass img{
+   
+    width: 33.3vh;
+  }
+  .best-selling p{
+    margin-top: 5vh;
+
+
+  }
+  .best-selling-button{
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+  }
+  .best-selling-button button{
+    border-radius: 1rem;
+  background-color: black;
+    width: 17vh;
+    height: 5.5vh;
+    color: white;
+    font-weight: bold;
+   
+    margin-bottom: 10vh;
+
+  }
+  .last-row-images{
+    margin: auto;
+        width: 80vh;
+        height: 60vh;
+        
+        display: flex;
+
+
+  }
+  .watch-slippers{
+    width: 30vh;
+   
+
+  }
+  .flowervass{
+    margin-left: 20vh;
+    width: 30vh;
+    
+  }
+  .flowervass img{
+    width: 40vh;
+    height: 60vh;
+  }
+  .sub-watch{
+    height: 27.5vh;
+    margin-bottom: 5vh;
+  }
+  .sub-slippers{
+    height: 27.5vh;
+  }
+  .sub-watch img{
+    width: 40vh;
+    height: 27.5vh;
+
+  }
+  .sub-slippers img{
+    width: 40vh;
+    height: 27.5vh;
+
+  }

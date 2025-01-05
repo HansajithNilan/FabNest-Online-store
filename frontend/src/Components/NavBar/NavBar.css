@@ -16,8 +16,9 @@ a {
   
     justify-content: space-between;
     border-radius: 1rem;
-    width: 165vh;
-    box-shadow: 2px 10px 8px #cecece;
+    width: 100%;
+    box-shadow: 2px 2px 10px #5c5c5c;
+    position: fixed;
   }
   .links ul {
     list-style: none;
@@ -89,17 +90,14 @@ a {
     cursor: pointer;
    
   }
-  @media (min-width:200px){
+  @media (max-width:170vh) {
+
     .Navbar-container{
-        width: 80%;
-
+      width: 170vh;
     }
-    .buttons{
-    margin-top: 1.6rem;
-    }
-
-
+    
   }
+
 
 
   
