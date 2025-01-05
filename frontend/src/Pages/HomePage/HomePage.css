@@ -3,7 +3,11 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.homepage{
+  margin: auto;
+  background-color: rgb(237, 237, 237);
+  
+}
 
 .content {
   margin: auto;
