@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../../Components/NavBar/NavBar.jsx";
+import Footer from "../../Components/Footer/Footer.jsx"
 
 import "./HomePage.css";
 
@@ -109,6 +110,7 @@ function HomePage() {
         </div>
         
       </div>
+      <Footer/>
     </div>
   );
 }
