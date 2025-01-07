@@ -1,0 +1,79 @@
+/* Forgotpswd.css */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    height: 100vh;
+  }
+  
+  .containtpwd {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px 50px;
+    width: 450px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 10rem;
+  }
+  
+  .containtpwd h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .containtpwd p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+  
+  .containtpwd form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .containtpwd label {
+    font-size: 14px;
+    color: #333333;
+    align-self: flex-start;
+    margin-bottom: 5px;
+  }
+  
+  .containtpwd input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .containtpwd input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .containtpwd button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #555555;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .containtpwd button:hover {
+    background-color: #444444;
+  }
+  
+ 
+  
