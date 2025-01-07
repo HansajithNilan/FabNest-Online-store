@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+
 a {
     text-decoration: none;
   }
@@ -43,9 +45,13 @@ a {
   
   .log-text {
     margin: 1rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
     font-weight: bold;
   }
+  .log-text h1{
+    font-family: "Mogra", serif;
+  }
+
   .logo img {
     width: 6vh;
     height: 6vh;

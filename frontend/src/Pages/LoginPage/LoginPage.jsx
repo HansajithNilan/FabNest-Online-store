@@ -2,6 +2,7 @@ import React from 'react'
 import './LoginPage.css'
 
 import NavBar from '../../Components/NavBar/NavBar'
+import Footer from "../../Components/Footer/Footer"
 
 function LoginPage() {
   return (
@@ -36,6 +37,7 @@ function LoginPage() {
             </div>
           
     </div>
+    <Footer/>
     </div>
     
   )
