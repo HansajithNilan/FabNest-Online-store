@@ -26,7 +26,7 @@ function ProductsPage() {
         </div>
         </div>
         </div>
-        <div className='flowervass'>
+        <div className='flowerWass'>
             <h3>Flower Vass</h3>
         <div className='flowervass-carts'>
         <div className='flowervass1-cart'>
