@@ -1,30 +1,33 @@
 /* About.css */
-.wrapper {
+.aboutus {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
     
+    
   }
   
-  .content {
+  .about-us-content {
+    background-color: #f9f9f9;
+   
     width: 150vh;
-    margin: auto;
-    padding-top: 15vh;
+  margin: auto;
+    padding-top: 17vh;
    
   }
   
-  .content h1 {
+  .about-us-content h1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
     text-align: center;
   }
   
-  .parent {
+  .about-us-parent {
     display: flex;
     align-items: center;
   }
   
-  .image img {
+  .about-us-image img {
     height: 28rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(173, 147, 147, 0.2);
@@ -32,21 +35,21 @@
     margin-left: 1rem;
   }
   
-  .list {
+  .about-us-list {
     width: 900px;
     text-align: left;
   }
   
-  .list ul {
+  .about-us-list ul {
     list-style-type: none;
   }
   
-  .list li {
+  .about-us-list li {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
   
-  .list li::before {
+  .about-us-list li::before {
     content: "• ";
     color: #444;
     font-weight: bold;

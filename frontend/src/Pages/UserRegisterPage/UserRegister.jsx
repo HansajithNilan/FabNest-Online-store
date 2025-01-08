@@ -36,7 +36,7 @@ function UserRegister() {
         </div>
        </div>
      
-    
+    <Footer/>
     </div>
   );
 }
