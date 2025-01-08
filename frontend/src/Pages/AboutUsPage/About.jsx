@@ -1,7 +1,16 @@
 import React from 'react'
 import './About.css'
 import NavBar from '../../Components/NavBar/NavBar'
+
+
+
+
+
+
+
 import Footer from "../../Components/Footer/Footer"
+
+
 
 function About() {
   return (

@@ -1,10 +1,10 @@
 import React from 'react'
 import './Forgotpswd.css'
 import NavBar from '../../Components/NavBar/NavBar'
-
+import Footer from '../../Components/Footer/Footer'
 function Forgotpswd() {
   return (
-    <div className='wrapper'>
+    <div className='password-wrapper'>
       <NavBar/>
       <div className='containtpwd'>
         <div>
@@ -19,6 +19,7 @@ function Forgotpswd() {
                     <button>Update password</button><br/>
         </form>
       </div>
+      <Footer/>
     </div>
   )
 }
