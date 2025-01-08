@@ -8,26 +8,33 @@ a {
     padding: 0;
   }
 
+  
 
+  
   .Navbar-container {
     background-color: rgb(255, 255, 255);
     display: flex;
-    margin: auto;
+    margin: 0 auto;
+    
   
     justify-content: space-between;
     border-radius: 1rem;
-    width: 100%;
+   width: 100%;
     box-shadow: 2px 2px 10px #5c5c5c;
     position: fixed;
-  }
-  .links ul {
-    list-style: none;
-    display: flex;
   }
   .links ul li {
     padding: 0rem .5rem 0rem .5rem;
     margin: 1.8rem;
   }
+  .links ul {
+    list-style: none;
+  display: flex;
+  }
+
+
+ 
+  
   .links ul li a {
     color: black;
     font-weight: bold;
@@ -94,14 +101,7 @@ a {
     cursor: pointer;
    
   }
-  @media (max-width:170vh) {
-
-    .Navbar-container{
-      width: 170vh;
-    }
-    
-  }
-
-
-
   
+
+
+ 

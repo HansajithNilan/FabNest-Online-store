@@ -6,6 +6,7 @@
 .homepage{
   margin: auto;
   background-color: rgb(237, 237, 237);
+ width: 100%;
   
 }
 
@@ -29,6 +30,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-size: cover;
 }
 .text1 {
+ 
   margin-right: 10vh;
   display: flex;
   justify-content: flex-end;
@@ -74,6 +76,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: white;
 }
 .secondline {
+  
   display: flex;
   justify-content: flex-end;
   margin-top: 12vh;

@@ -18,6 +18,7 @@ import Forgotpswd from './Pages/Forgotpswd/Forgotpswd.jsx'
 
 
 
+
 function App() {
 
 
@@ -36,7 +37,7 @@ function App() {
     <Route path='/About' element={<About/>}/>
     <Route path='/UserRegister' element={<UserRegister/>}/>
     <Route path='/forgotpswd' element={<Forgotpswd/>}/>
-
+   
 
     </Routes>
       

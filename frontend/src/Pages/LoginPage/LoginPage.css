@@ -2,31 +2,40 @@
     font-family: Arial, Helvetica, sans-serif
 }
 
-
+.wrapper{
+    margin: 0 auto;
+    padding: 0;
+}
 
 .page {
     margin: auto;
-    width: 150vh;
+    width: 100%;
+    
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://i.etsystatic.com/14319357/r/il/1a0f9e/5527243028/il_570xN.5527243028_csg6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 20vh 0vh 5vh 0vh;
+   margin-top: 20vh;
+   padding: 10vh 0vh 10vh;
+    max-width: 900px;
 }
 
+
 .box {
-    width: 70vh;
-    height: 65vh;
+    width: 100%;
+    height: 70vh;
     background-color: rgba(189, 189, 189, 0.3); /* Use rgba for transparency */
     margin: auto;
     border-radius: 1rem;
     border: 2px solid black;
     padding: 5vh 0vh 5vh 0vh;
     border: none;
+    max-width: 550px;
 }
 
 .center-box {
     background-color: rgba(189, 189, 189, 0.089);
-    width: 55vh;
+    max-width: 400px;
+    width: 100%;
     height: 52vh;
     margin: auto;
     border: 1px solid rgb(255, 255, 255);
