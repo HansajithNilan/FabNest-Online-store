@@ -8,6 +8,7 @@ import LoginPage from './Pages/LoginPage/LoginPage.jsx'
 import About from './Pages/AboutUsPage/About.jsx'
 import UserRegister from './Pages/UserRegisterPage/UserRegister.jsx'
 import Forgotpswd from './Pages/Forgotpswd/Forgotpswd.jsx'
+import ContactUs from './Pages/ContactUsPage/ContactUs.jsx'
 
 
 
@@ -25,6 +26,7 @@ function App() {
     <Route path='/About' element={<About/>}/>
     <Route path='/UserRegister' element={<UserRegister/>}/>
     <Route path='/forgotpswd' element={<Forgotpswd/>}/>
+    <Route path='/contactus' element={<ContactUs/>}/>
 
     </Routes>
       
