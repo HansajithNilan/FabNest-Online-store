@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage":  "https://HansajithNilan.github.io/FabNest-Online-store",
+  "homepage": "https://HansajithNilan.github.io/FabNest-Online-store",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -31,5 +31,4 @@
     "globals": "^15.14.0",
     "vite": "^6.0.5"
   }
-  
 }

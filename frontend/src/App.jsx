@@ -19,6 +19,7 @@ import ContactUs from './Pages/ContactUsPage/ContactUs.jsx'
 
 
 
+
 function App() {
 
 
@@ -37,7 +38,9 @@ function App() {
     <Route path='/About' element={<About/>}/>
     <Route path='/UserRegister' element={<UserRegister/>}/>
     <Route path='/forgotpswd' element={<Forgotpswd/>}/>
+
     <Route path='/contactus' element={<ContactUs/>}/>
+
 
 
     </Routes>

@@ -4,6 +4,7 @@ import './NavBar.css'
 
 function NavBar() {
   return (
+    
     <div className='Navbar-container'>
         <div className='logo'>
             <div className='logo-img'>
@@ -33,7 +34,7 @@ function NavBar() {
 
 
         
-        
+     
     </div>
   )
 }
