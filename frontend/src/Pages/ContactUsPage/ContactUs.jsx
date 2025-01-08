@@ -11,9 +11,9 @@ function ContactUs() {
     <div className='contact-us-wrapper'>
         <NavBar/>
       <div className='contact-us-content'> 
-      <div>
+      
         <div className='pic'>
-           <img src='../Images/contactus.jpg'/>
+          
            <div className='text'>
             <h1>Get in touch</h1><br/>
             <p>Want to get in touch? We'd love to hear from you. Here's how you reach us..</p>
@@ -33,7 +33,7 @@ function ContactUs() {
             <button>Contact Support</button>
            </div>
         </div>
-        </div>
+       
       </div>
       <Footer/>
     </div>
