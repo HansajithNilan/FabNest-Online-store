@@ -1,18 +1,22 @@
 import React from 'react'
 import './About.css'
 import NavBar from '../../Components/NavBar/NavBar'
-import Footer from '../../Components/Footer/Footer'
+
+
+import Footer from "../../Components/Footer/Footer"
+
+
 function About() {
   return (
-    <div className='wrapper'>
+    <div className='aboutus'>
       <NavBar/>
-      <div className='content'>
+      <div className='about-us-content'>
          <h1>About Us</h1>
-         <div className='parent'>
-            <div className='image'>
+         <div className='about-us-parent'>
+            <div className='about-us-image'>
                <img src='../Images/AboutUsPage.jpg'/>
             </div>
-            <div className='list'>
+            <div className='about-us-list'>
                  <ul>
                     <li>
                        Welcome to FabNest, your one-stop online destination for delightful gifts, everyday essentials, and trendy accessories. At FabNest, we believe in making shopping easy, enjoyable, and accessible for everyone.
