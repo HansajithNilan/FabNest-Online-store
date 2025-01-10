@@ -14,6 +14,8 @@ import About from './Pages/AboutUsPage/About.jsx'
 import UserRegister from './Pages/UserRegisterPage/UserRegister.jsx'
 import Forgotpswd from './Pages/Forgotpswd/Forgotpswd.jsx'
 import ContactUs from './Pages/ContactUsPage/ContactUs.jsx'
+import Users from './Pages/UserProfile/UserProfile.jsx'
+import UserUpdates from './Pages/UpdateUsers/UpdateUsers.jsx'
 
 
 
@@ -40,6 +42,8 @@ function App() {
     <Route path='/forgotpswd' element={<Forgotpswd/>}/>
 
     <Route path='/contactus' element={<ContactUs/>}/>
+    <Route path='/userprofile' element={<Users/>}/>
+    <Route path='/update/:id' element={<UserUpdates/>}/>
 
 
 
