@@ -10,7 +10,6 @@ function LoginPage() {
    
         
     <div className='wrapper'>
-    
     <NavBar/>
     <div className='page'>
     <div className='box '>
