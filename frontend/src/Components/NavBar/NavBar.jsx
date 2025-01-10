@@ -25,10 +25,14 @@ function NavBar() {
         </div>
         <div className='buttons'>
             <div className='Login-button'>
+                <a href='/Login'>
                 <button>Login</button>
+                </a>
             </div>
             <div className='Register-button'>
-                <button>Register</button>
+               <a href='/UserRegister'>
+                <button >Register</button>
+                </a>
             </div>
         </div>
 
