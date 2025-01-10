@@ -1,31 +1,50 @@
-import React, { useState } from 'react';
-import './UserRegister.css';
-import NavBar from '../../Components/NavBar/NavBar';
-import Footer from '../../Components/Footer/Footer';
-import axios from 'axios';
+import React ,{useState,useEffect}from 'react'
+import {useParams,useNavigate} from 'react-router-dom'
+import axios from 'axios'
 
-function UserRegister() {
-  const [name, setName] = useState(''); /////
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+import './UpdateUsers.css'
+import NavBar from '../../Components/NavBar/NavBar'
+import Footer from '../../Components/Footer/Footer'
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+function UpdateUsers() {
+
+    const{id} =useParams()
+
+    const [name, setName] = useState(''); /////
+    const [email, setEmail] = useState('');
+   
+   
+const navigate =useNavigate()
     
-    console.log({ name, email, password });
-
+  useEffect(() => {
     axios
-      .post('http://localhost:5000/register', { name, email, password })
+      .get("http://localhost:5000/getUsers/"+id)
+      .then((users) => {console.log(users)
+        setName(users.data.name)
+        setEmail(users.data.email)
+        
+      })
+      .catch((err) => console.log(err));
+
+  }, []);
+
+
+  const UpdateButton =(e)=>{
+    e.preventDefault()
+    axios
+      .put('http://localhost:5000/updateuser/'+id, { name, email })
       .then((result) => {
-        console.log(' User registration successful:', result.data);
-        alert('User registration successful!');
+        console.log(' User Update successful:', result.data);
+        alert('User Update successful!');
+        navigate('/userprofile')
+
       })
       .catch((err) => {
-        console.error('Error registering user:', err);
-        alert('Registration failed. Please try again.');
+        console.error('Error update user:', err);
+        alert('update failed. Please try again.');
       });
-  };
 
+  }
   return (
     <div className="user-register-wrapper">
       <NavBar />
@@ -35,7 +54,7 @@ function UserRegister() {
           <p>
             Already have an account? <a href="#">Log in</a>
           </p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={UpdateButton} >
             <label>What should we call you?</label>
             <br />
             <input
@@ -54,27 +73,19 @@ function UserRegister() {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <label>Enter password:</label>
-            <br />
-            <input
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
+            
             <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
             <p>
               By creating an account, you agree to the
               <a href="#"> Terms of use</a> and <a href="#">Privacy Policy.</a>
             </p>
-            <button type="submit">Create an account</button> 
+           <a href='/userprofile'> <button type="submit">Update an account</button> </a>
           </form>
         </div>
       </div>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default UserRegister;
+export default UpdateUsers

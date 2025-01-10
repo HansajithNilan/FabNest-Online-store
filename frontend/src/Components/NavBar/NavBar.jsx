@@ -17,7 +17,7 @@ function NavBar() {
         <div className='links'>
         <ul>
             <li><a href='#'>Home</a></li>
-            <li><a href='#'>Products</a></li>
+            <li><a href='/products'>Products</a></li>
             <li><a href='#'>Top Products</a></li>
             <li><a href='#'>About Us</a></li>
             <li><a href='#'>Contact</a></li>
@@ -25,10 +25,14 @@ function NavBar() {
         </div>
         <div className='buttons'>
             <div className='Login-button'>
+                <a href='/Login'>
                 <button>Login</button>
+                </a>
             </div>
             <div className='Register-button'>
-                <button>Register</button>
+               <a href='/UserRegister'>
+                <button >Register</button>
+                </a>
             </div>
         </div>
 
