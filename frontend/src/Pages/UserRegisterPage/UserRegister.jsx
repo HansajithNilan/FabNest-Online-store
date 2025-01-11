@@ -3,11 +3,14 @@ import './UserRegister.css';
 import NavBar from '../../Components/NavBar/NavBar';
 import Footer from '../../Components/Footer/Footer';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function UserRegister() {
   const [name, setName] = useState(''); /////
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +22,7 @@ function UserRegister() {
       .then((result) => {
         console.log(' User registration successful:', result.data);
         alert('User registration successful!');
+        navigate('/Login')
       })
       .catch((err) => {
         console.error('Error registering user:', err);
@@ -68,7 +72,7 @@ function UserRegister() {
               By creating an account, you agree to the
               <a href="#"> Terms of use</a> and <a href="#">Privacy Policy.</a>
             </p>
-            <button type="submit">Create an account</button> 
+           <button type="submit">Create an account</button>
           </form>
         </div>
       </div>
