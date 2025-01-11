@@ -18,7 +18,12 @@ import Users from './Pages/UserProfile/UserProfile.jsx'
 import UserUpdates from './Pages/UpdateUsers/UpdateUsers.jsx'
 
 
+//Admin Pages
 
+//Teddy Bares Part
+import AddTeddybares from './Pages/Admin/ProductsPage/TeddyAddPage/AddProducts.jsx'
+import DisplayTeddy from './Pages/Admin/ProductsPage/DisplayTeddybares/DisplayTeddy.jsx'
+import UpdateTeddy from './Pages/Admin/ProductsPage/UpdateTeddyBares/UpdateTeddy.jsx'
 
 
 
@@ -45,7 +50,9 @@ function App() {
     <Route path='/userprofile' element={<Users/>}/>
     <Route path='/update/:id' element={<UserUpdates/>}/>
 
-
+    <Route path='/addteddybares' element={<AddTeddybares/>}/>
+    <Route path='/displayteddybares' element={<DisplayTeddy/>}/>
+    <Route path='/updateteddybares/:id' element={<UpdateTeddy/>}/>
 
     </Routes>
       

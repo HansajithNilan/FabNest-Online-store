@@ -17,7 +17,9 @@ function LoginPage() {
     console.log({email,password});
 
     axios
+
       .post("http://localhost:5000/login", { email, password })
+
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {

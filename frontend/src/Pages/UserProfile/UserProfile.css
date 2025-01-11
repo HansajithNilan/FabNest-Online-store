@@ -1,0 +1,79 @@
+/* General container styling */
+.user-profile-wrapper {
+    font-family: Arial, sans-serif;
+  }
+  
+  .user-profile-container {
+    background-color: #f8f9fa;
+    margin: auto;
+    padding-top: 20vh; 
+    width: 150vh; 
+  }
+  
+  .user-table {
+    width: 80%;
+    margin: 2.22vh auto; 
+    background-color: #ffffff;
+    box-shadow: 0 0.36vh 0.54vh rgba(0, 0, 0, 0.1); 
+    border-radius: 0.9vh;
+  }
+  
+  .user-table-header {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  .user-table-header-cell {
+    padding: 1.6vh; 
+    text-align: left;
+  }
+  
+  .user-table-body {
+    background-color: #ffffff;
+  }
+  
+  .user-table-row {
+    border-bottom: 0.36vh solid #1f2020; 
+  }
+  
+  .user-table-row:hover {
+    background-color: #e9ecef;
+  }
+  
+  .user-table-cell {
+    padding: 1.6vh; 
+    text-align: left;
+  }
+  
+  .user-update-link {
+    text-decoration: none;
+  }
+  
+  .user-update-button,
+  .user-delete-button {
+    padding: 0.9vh 1.25vh; 
+    margin-right: 0.54vh; 
+    font-size: 1.42vh; 
+    border: none;
+    border-radius: 0.36vh; 
+    cursor: pointer;
+  }
+  
+  .user-update-button {
+    background-color: #ffc107;
+    color: #ffffff;
+  }
+  
+  .user-update-button:hover {
+    background-color: #e0a800;
+  }
+  
+  .user-delete-button {
+    background-color: #dc3545;
+    color: #ffffff;
+  }
+  
+  .user-delete-button:hover {
+    background-color: #c82333;
+  }
+  

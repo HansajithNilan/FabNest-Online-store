@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 import NavBar from "../../Components/NavBar/NavBar.jsx"
 import Footer from "../../Components/Footer/Footer.jsx"
 import "./ProductsPage.css"
 function ProductsPage() {
+
+    const [products,setProducts] = useState([]);
+
+    useEffect(()=>{
+        axios.get('http://localhost:5000/getteddy')
+        .then((products)=>setProducts(products.data))
+        .catch((err)=>console.log(err));
+    },[]);
+
+
+ 
   return (
     <div className='productsPage'>
         <NavBar/>
@@ -11,9 +23,11 @@ function ProductsPage() {
             <h1>Products</h1>
         <div className='teddybares'>
             <h3>Teddy Bares</h3>
+          
         <div className='teddybares-carts'>
-        <div className='Brownteddy-cart'>
             
+        <div className='Brownteddy-cart'>
+           
             </div>
             <div className='Pinkteddy-cart'>
             
@@ -82,5 +96,6 @@ function ProductsPage() {
     </div>
   )
 }
+
 
 export default ProductsPage

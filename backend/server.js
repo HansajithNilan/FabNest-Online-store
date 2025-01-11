@@ -4,6 +4,9 @@ import mongoose from 'mongoose';
 import cors from "cors"
 import RegisterModel from "./models/UserRegister.js"
 
+import TeddybareModel from "./models/AddTeddy.js"
+
+
 
 
 const app = express()
@@ -77,6 +80,45 @@ app.delete('/deleteUser/:id',(req,res)=>{
 
   RegisterModel.findByIdAndDelete({_id:id})
   .then(res=>res.json(res))
+  .catch(err => res.json(err))
+
+
+})
+
+//Addd Teddybares field
+
+app.post('/addteddy',(req,res)=>{
+  TeddybareModel.create(req.body)
+  .then(teddy => res.json(teddy) )
+.catch(err=> res.json(err))
+})
+
+app.get('/getteddy',(req,res)=>{
+  TeddybareModel.find()
+  .then((products)=> res.json(products))
+  .catch((err)=>res.json(err))
+})
+
+app.delete('/deleteteddybares/:id',(req,res)=>{
+  const id = req.params.id;
+  TeddybareModel.findByIdAndDelete({_id:id})
+  .then(res=>res.json(res))
+  .catch(err=> res.json(err))
+})
+app.get('/getteddy/:id',(req,res)=>{
+  const id = req.params.id;
+  TeddybareModel.findById({_id:id})
+  .then(product => res.json(product))
+  .catch(err => res.json(err))
+})
+
+app.put('/updateteddybares/:id',(req,res)=>{
+  const id = req.params.id;
+  TeddybareModel.findByIdAndUpdate({_id:id},{
+    name:req.body.name,
+    price:req.body.price,
+    color:req.body.color})
+  .then(product => res.json(product))
   .catch(err => res.json(err))
 
 })
