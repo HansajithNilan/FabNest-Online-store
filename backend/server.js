@@ -3,7 +3,9 @@ import { connectDB } from './config/db.js';
 import mongoose from 'mongoose';
 import cors from "cors"
 import RegisterModel from "./models/UserRegister.js"
+
 import TeddybareModel from "./models/AddTeddy.js"
+
 
 
 
@@ -80,6 +82,7 @@ app.delete('/deleteUser/:id',(req,res)=>{
   .then(res=>res.json(res))
   .catch(err => res.json(err))
 
+
 })
 
 //Addd Teddybares field
@@ -117,4 +120,5 @@ app.put('/updateteddybares/:id',(req,res)=>{
     color:req.body.color})
   .then(product => res.json(product))
   .catch(err => res.json(err))
+
 })
