@@ -5,7 +5,8 @@ import cors from "cors"
 import RegisterModel from "./models/UserRegister.js"
 
 import TeddybareModel from "./models/AddTeddy.js"
-
+import FlowerModel from "./models/AddFlower.js"
+import SlipperModel from "./models/AddSlipper.js"
 
 
 
@@ -22,7 +23,7 @@ console.log(process.env.MONGO_URL)
 
 app.listen(5000,()=>{
   connectDB();
-    console.log("Server Started at http://localhost:500");
+    console.log("Server Started at http://localhost:5000");
 });
 
 //post method
@@ -121,4 +122,80 @@ app.put('/updateteddybares/:id',(req,res)=>{
   .then(product => res.json(product))
   .catch(err => res.json(err))
 
+})
+
+//Add Flowers field
+
+app.post('/addflower',(req,res)=>{
+  FlowerModel.create(req.body)
+  .then(teddy => res.json(teddy) )
+.catch(err=> res.json(err))
+})
+
+app.get('/getflowers',(req,res)=>{
+  FlowerModel.find()
+  .then((products)=> res.json(products))
+  .catch((err)=>res.json(err))
+})
+
+app.delete('/deleteflower/:id',(req,res)=>{
+  const id = req.params.id;
+  FlowerModel.findByIdAndDelete({_id:id})
+  .then(res=>res.json(res))
+  .catch(err=> res.json(err))
+})
+app.get('/getflower/:id',(req,res)=>{
+  const id = req.params.id;
+  FlowerModel.findById({_id:id})
+  .then(product => res.json(product))
+  .catch(err => res.json(err))
+})
+
+app.put('/updateflower/:id',(req,res)=>{
+  const id = req.params.id;
+  FlowerModel.findByIdAndUpdate({_id:id},{
+    name:req.body.name,
+    price:req.body.price,
+    color:req.body.color})
+  .then(product => res.json(product))
+  .catch(err => res.json(err))
+
+})
+
+//Add Slippers feild
+
+app.post('/addslipper', (req,res) =>{
+  SlipperModel.create(req.body)
+  .then(slipper => res.json(slipper))
+  .catch(err => res.json(err))
+})
+
+app.get('/getslippers',(req,res) => {
+  SlipperModel.find()
+  .then(slippers => res.json(slippers) )
+  .catch(err => res.json(err))
+})
+
+app.get('/getslipper/:id',(req,res) => {
+  const id = req.params.id;
+  SlipperModel.findById({_id:id})
+  .then(slipper => res.json(slipper))
+  .catch(err => res.json(err))
+})
+
+app.delete('/deleteslipper/:id',(req,res)=>{
+  const id = req.params.id;
+  SlipperModel.findByIdAndDelete({_id:id})
+  .then(slipper => res.json(slipper))
+  .catch(err => res.json(err))
+})
+
+app.put('/updateslipper/:id',(req,res) => {
+  const id = req.params.id;
+  SlipperModel.findByIdAndUpdate({_id:id},{
+    category:req.body.category,
+    price:req.body.price,
+    size:req.body.size})
+  .then(slipper => res.json(slipper))  
+  .catch(err => res.json(err))
 })
