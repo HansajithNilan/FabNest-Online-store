@@ -7,10 +7,25 @@ import "./ProductsPage.css"
 function ProductsPage() {
 
     const [products,setProducts] = useState([]);
+    const [teddies,setTeddy] = useState([]);
+    const [flowers,setFlowers] = useState([]);
+    const [slippers,setSlippers] = useState([]);
 
     useEffect(()=>{
         axios.get('http://localhost:5000/getteddy')
-        .then((products)=>setProducts(products.data))
+        .then((products)=>setTeddy(products.data))
+        .catch((err)=>console.log(err));
+    },[]);
+
+    useEffect(()=>{
+        axios.get('http://localhost:5000/getflowers')
+        .then((products)=>setFlowers(products.data))
+        .catch((err)=>console.log(err));
+    },[]);
+
+    useEffect(()=>{
+        axios.get('http://localhost:5000/getslippers')
+        .then((products)=>setSlippers(products.data))
         .catch((err)=>console.log(err));
     },[]);
 
@@ -25,70 +40,70 @@ function ProductsPage() {
             <h3>Teddy Bares</h3>
           
         <div className='teddybares-carts'>
-            
-        <div className='Brownteddy-cart'>
-           
-            </div>
-            <div className='Pinkteddy-cart'>
-            
+            {teddies.map((teddy)=>{
+                return(
+                <div className='teddy'>
+                    <div className='teddy-img'>
+                    image
+                    </div>
+                    <div className='tedy-text'>
+                    <p>Name : {teddy.name} </p>
+                    <p>Color: {teddy.color}</p>
+                    </div>
+                    <div className='tedy-buy'>
+                    <p>{teddy.price}</p>
+                    <button>Buy Now</button>
+                    </div>
+                </div>
+                );
+            })}
         </div>
-        <div className='blueteddy-cart'>
-            
         </div>
-        <div className='blackteddy-cart'>
-            
-        </div>
-        </div>
-        </div>
+
         <div className='flowerWass'>
             <h3>Flower Vass</h3>
         <div className='flowervass-carts'>
-        <div className='flowervass1-cart'>
-            
-            </div>
-            <div className='flowervass2-cart'>
-            
-        </div>
-        <div className='flowervass3-cart'>
-            
-        </div>
-        <div className='flowervass4-cart'>
-            
-        </div>
-        </div>
-        </div>
-        <div className='watches'>
-            <h3>Watches </h3>
-        <div className='watches-carts'>
-        <div className='watches1-cart'>
-            
-            </div>
-            <div className='watches2-cart'>
-            
-        </div>
-        <div className='watches3-cart'>
-            
-        </div>
-        <div className='watches4-cart'>
-            
+        
+        {flowers.map((flower)=>{
+                return(
+                <div className='flowers'>
+                    <div className='flower-img'>
+                    image
+                    </div>
+                    <div className='flower-text'>
+                    <p>Name : {flower.name} </p>
+                    <p>Color: {flower.color}</p>
+                    </div>
+                    <div className='flower-buy'>
+                    <p>{flower.price}</p>
+                    <button>Buy Now</button>
+                    </div>
+                </div>
+                );
+            })}
         </div>
         </div>
-        </div>
+        
         <div className='Slippers'>
             <h3>Slippers</h3>
         <div className='Slippers-carts'>
-        <div className='Slippers1-cart'>
-            
-            </div>
-            <div className='Slippers2-cart'>
-            
-        </div>
-        <div className='Slippers3-cart'>
-            
-        </div>
-        <div className='Slippers4-cart'>
-            
-        </div>
+        {slippers.map((slipper)=>{
+                return(
+                <div className='slipper'>
+                    <div className='slipper-img'>
+                    image
+                    </div>
+                    <div className='slipper-text'>
+                    <p>Category : {slipper.category} </p>
+                    <p>Size: {slipper.size}</p>
+                    </div>
+                    <div className='slipper-buy'>
+                    <p>{slipper.price}</p>
+                    <button>Buy Now</button>
+                    </div>
+                </div>
+                );
+            })}
         </div>
         </div>
         </div>

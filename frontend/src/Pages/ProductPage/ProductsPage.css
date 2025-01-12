@@ -15,9 +15,9 @@
 }
 .pagecontent h1{
     font-family: "PT Serif", serif;
-text-align: center;
-  padding-top: 17vh;
-font-size: 3rem;
+    text-align: center;
+    padding-top: 17vh;
+    font-size: 3rem;
 }
 .teddybares{
     margin-top: 5vh;
@@ -28,157 +28,58 @@ font-size: 3rem;
     margin-top: 7vh;
     margin-left: 5vh;
 }
-.watches{
-    margin-top: 7vh;
-    margin-left: 5vh;
-}
+
 .Slippers{
     margin-top: 7vh;
     margin-left: 5vh;
 }
-.teddybares h3{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.teddybares-carts{
+
+
+.teddybares-carts,.flowervass-carts,.Slippers-carts{
     margin-top: 3vh;
-    
-    display: flex;
     width: 140vh;
     height: 50vh;
-}
-.Brownteddy-cart {
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
-}
-.Pinkteddy-cart{
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
-}
-.blueteddy-cart{
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
-}
-.blackteddy-cart{
-    background-color: aliceblue;
-    border-radius: 1.5rem;
-    width: 32.75vh;
-}
-
-/* Flower Vass */
-
-
-.flowerWass h3{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.flowervass-carts{
-    margin-top: 3vh;
-    
     display: flex;
-    width: 140vh;
-    height: 50vh;
-}
-.flowervass1-cart {
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
-}
-.flowervass2-cart{
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
-}
-.flowervass3-cart{
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
-}
-.flowervass4-cart{
-    background-color: aliceblue;
-    border-radius: 1.5rem;
-    width: 32.75vh;
+    flex-direction: row;
 }
 
-/* watches */
-
-.watches h3{
-    font-size: 1.5rem;
-    font-weight: bold;
+.teddy,.flowers,.slipper{
+    background-color: aliceblue;
+    margin-right:3vh ;
+    width: 32.75vh;
+    border-radius: 1.5rem;
+    padding: 5vh;
 }
-.watches-carts{
-    margin-top: 3vh;
-    
+
+.tedy-buy,.flower-buy,.slipper-buy{
     display: flex;
-    width: 140vh;
-    height: 50vh;
-}
-.watches1-cart {
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
-}
-.watches2-cart{
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
-}
-.watches3-cart{
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
-}
-.watches4-cart{
-    background-color: aliceblue;
-    border-radius: 1.5rem;
-    width: 32.75vh;
+    flex-direction: row;
+    font-weight: bold;  
 }
 
-/* slippers */
-
-.Slippers h3{
-    font-size: 1.5rem;
-    font-weight: bold;
+.teddybares-carts button,.flowervass-carts button,.Slippers-carts button{
+  color: white;
+  background-color: black;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: 15vh; 
+  border: none;
+  
 }
-.Slippers-carts{
-    margin-top: 3vh;
+
+.Slippers-carts button:hover{
+    background-color: red;
     
-    display: flex;
-    width: 140vh;
-    height: 50vh;
 }
-.Slippers1-cart {
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
+.teddybares-carts button:hover{
+    background-color: red;
 }
-.Slippers2-cart{
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
+.flowervass-carts button:hover{
+    background-color: red;
 }
-.Slippers3-cart{
-    background-color: aliceblue;
-    margin-right:3vh ;
-    width: 32.75vh;
-    border-radius: 1.5rem;
+
+.tedy-text,.flower-text,.slipper-text{
+    margin: 3vh 0;
 }
-.Slippers4-cart{
-    background-color: aliceblue;
-    border-radius: 1.5rem;
-    width: 32.75vh;
-}
+
+
