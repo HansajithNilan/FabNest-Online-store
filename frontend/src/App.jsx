@@ -25,6 +25,16 @@ import AddTeddybares from './Pages/Admin/ProductsPage/TeddyAddPage/AddProducts.j
 import DisplayTeddy from './Pages/Admin/ProductsPage/DisplayTeddybares/DisplayTeddy.jsx'
 import UpdateTeddy from './Pages/Admin/ProductsPage/UpdateTeddyBares/UpdateTeddy.jsx'
 
+//Flowers part
+import FlowerAdd from './Pages/Admin/ProductsPage/FlowerAddPage/FlowerAdd.jsx'
+import DisplayFlowers from './Pages/Admin/ProductsPage/DisplayFlower/DisplayFlowers.jsx'
+import UpdateFlowers from './Pages/Admin/ProductsPage/UpdateFlowers/UpdateFlowers.jsx'
+
+//Slipper part
+import SlipperAdd from './Pages/Admin/ProductsPage/SlipperAddPage/SlipperAdd.jsx'
+import DisplaySlipppers from './Pages/Admin/ProductsPage/DisplaySlipper/DisplaySlipper.jsx'
+import UpdateSlippers from './Pages/Admin/ProductsPage/UpdateSlippers/UpdateSlippers.jsx'
+
 
 
 function App() {
@@ -53,6 +63,14 @@ function App() {
     <Route path='/addteddybares' element={<AddTeddybares/>}/>
     <Route path='/displayteddybares' element={<DisplayTeddy/>}/>
     <Route path='/updateteddybares/:id' element={<UpdateTeddy/>}/>
+
+    <Route path='/addflower' element={<FlowerAdd/>}/>
+    <Route path='/displayflowrs' element={<DisplayFlowers/>}/>
+    <Route path='/updateflower/:id' element={<UpdateFlowers/>}/>
+
+    <Route path='/addslipper' element={<SlipperAdd/>}/>
+    <Route path='/displayslippers' element={<DisplaySlipppers/>}/>
+    <Route path='/updateslipper/:id' element={<UpdateSlippers/>}/>
 
     </Routes>
       
