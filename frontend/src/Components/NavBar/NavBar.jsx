@@ -8,7 +8,7 @@ function NavBar() {
     <div className='Navbar-container'>
         <div className='logo'>
             <div className='logo-img'>
-            <img src='../Images/logo.png'></img>
+            <a href='/'><img src='../Images/logo.png'></img></a>
             </div>
             <div className='log-text'>
             <h1>FabNest</h1>
@@ -16,11 +16,11 @@ function NavBar() {
         </div>
         <div className='links'>
         <ul>
-            <li><a href='#'>Home</a></li>
+            <li><a href='/'>Home</a></li>
             <li><a href='/products'>Products</a></li>
             <li><a href='#'>Top Products</a></li>
-            <li><a href='#'>About Us</a></li>
-            <li><a href='#'>Contact</a></li>
+            <li><a href='/About'>About Us</a></li>
+            <li><a href='/contactus'>Contact</a></li>
         </ul>
         </div>
         <div className='buttons'>
