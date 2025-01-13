@@ -8,14 +8,14 @@ function DisplayFlowers() {
   const [products,setProducts] = useState([])
 
   useEffect(()=>{
-      axios.get('http://localhost:5000/getflowers')
+      axios.get('http://localhost:5000/flowers')
       .then((products)=>setProducts(products.data))
       .catch((err)=>console.log((err)));
 
   },[])
 
   const handleDelete = (id) =>{
-    axios.delete('http://localhost:5000/deleteflower/' + id)
+    axios.delete('http://localhost:5000/flowers/' + id)
     .then(res=>{
       console.log(res);
       window.location.reload();

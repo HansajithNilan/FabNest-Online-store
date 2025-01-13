@@ -15,7 +15,7 @@ function SlipperAdd() {
     e.preventDefault();
     console.log({category,price,size});
 
-    axios.post('http://localhost:5000/addslipper',{category,price,size})
+    axios.post('http://localhost:5000/slippers',{category,price,size})
     .then((result) => {
       console.log("Slipper add succefull",result.data);
       alert(`${category} Add Successfull`);

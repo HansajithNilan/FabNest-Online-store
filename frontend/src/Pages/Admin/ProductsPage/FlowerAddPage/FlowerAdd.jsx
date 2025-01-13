@@ -17,7 +17,7 @@ function FlowerAdd() {
 
     console.log({ name, price, color });
 
-    axios.post('http://localhost:5000/addflower',{name,price,color})
+    axios.post('http://localhost:5000/flowers',{name,price,color})
     .then((result)=>{
       console.log(" Flower Add SuccessFull ",result.data);
       alert(`${name} add successfull`);

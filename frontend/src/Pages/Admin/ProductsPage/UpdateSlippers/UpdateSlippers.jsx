@@ -15,7 +15,7 @@ function UpdateSlippers() {
     const navigate = useNavigate()
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/getslipper/'+id)
+        axios.get('http://localhost:5000/slippers/'+id)
         .then((product)=>{console.log(product)
                  setCategory(product.data.category)
                  setPrice(product.data.price)
@@ -26,7 +26,7 @@ function UpdateSlippers() {
 
   const UpdateButton = (e)=>{
     e.preventDefault()
-    axios.put('http://localhost:5000/updateslipper/'+id,{category,price,size})
+    axios.put('http://localhost:5000/slippers/'+id,{category,price,size})
     .then((result)=>{
       console.log('Slipper update successfull',result.data)
       alert(`${category} Update successfull` );

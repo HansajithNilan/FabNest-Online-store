@@ -17,7 +17,7 @@ function UpdateTeddy() {
     const navigate = useNavigate()
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/getteddy/'+id)
+        axios.get('http://localhost:5000/teddy/'+id)
         .then((product)=>{console.log(product)
                  setName(product.data.name)
                  setPrice(product.data.price)
@@ -28,7 +28,7 @@ function UpdateTeddy() {
 
     const UpdateButton = (e)=>{
         e.preventDefault()
-        axios.put('http://localhost:5000/updateteddybares/'+id,{name,price,color})
+        axios.put('http://localhost:5000/teddy/'+id,{name,price,color})
         .then((result)=>{
             console.log('Teddy Bare Update successfull',result.data)
             alert(`${name} Update successfull!`);

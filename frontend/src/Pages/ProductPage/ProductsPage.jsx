@@ -12,19 +12,19 @@ function ProductsPage() {
     const [slippers,setSlippers] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/getteddy')
+        axios.get('http://localhost:5000/teddy')
         .then((products)=>setTeddy(products.data))
         .catch((err)=>console.log(err));
     },[]);
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/getflowers')
+        axios.get('http://localhost:5000/flowers')
         .then((products)=>setFlowers(products.data))
         .catch((err)=>console.log(err));
     },[]);
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/getslippers')
+        axios.get('http://localhost:5000/slippers')
         .then((products)=>setSlippers(products.data))
         .catch((err)=>console.log(err));
     },[]);

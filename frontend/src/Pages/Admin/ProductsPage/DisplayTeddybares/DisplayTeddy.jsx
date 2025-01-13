@@ -9,14 +9,14 @@ function DisplayTeddy() {
     const [products,setProducts] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/getteddy')
+        axios.get('http://localhost:5000/teddy')
         .then((products)=>setProducts(products.data))
         .catch((err)=>console.log((err)));
 
     },[])
 
     const handleDelete = (id) =>{
-      axios.delete('http://localhost:5000/deleteteddybares/' + id)
+      axios.delete('http://localhost:5000/teddy/' + id)
       .then(res=>{
         console.log(res);
         window.location.reload();

@@ -19,7 +19,7 @@ function AddProducts() {
 
     console.log({ name, price, color });
 
-    axios.post('http://localhost:5000/addteddy',{name,price,color})
+    axios.post('http://localhost:5000/teddy',{name,price,color})
     .then((result)=>{
       console.log(" Teddy Bare Add SuccessFull ",result.data);
       alert(`${name}  Bare add successfull`);
