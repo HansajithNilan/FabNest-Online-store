@@ -14,7 +14,7 @@ function UpdateFlowers() {
     const navigate = useNavigate()
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/getflower/'+id)
+        axios.get('http://localhost:5000/flowers/'+id)
         .then((product)=>{console.log(product)
                  setName(product.data.name)
                  setPrice(product.data.price)
@@ -25,7 +25,7 @@ function UpdateFlowers() {
 
     const UpdateButton = (e)=>{
         e.preventDefault()
-        axios.put('http://localhost:5000/updateflower/'+id,{name,price,color})
+        axios.put('http://localhost:5000/flowers/'+id,{name,price,color})
         .then((result)=>{
             console.log('Flower Update successfull',result.data)
             alert(`${name} Update successfull!`);

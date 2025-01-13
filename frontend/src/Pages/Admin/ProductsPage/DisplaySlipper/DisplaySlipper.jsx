@@ -9,13 +9,13 @@ function DisplaySlipper() {
   const [product,setProduct]=useState([]);
 
   useEffect(()=>{
-    axios.get('http://localhost:5000/getslippers')
+    axios.get('http://localhost:5000/slippers')
     .then((products)=>setProduct(products.data))
     .catch((err)=>console.log(err));
   },[])
 
   const handleDelete = (id)=>{
-    axios.delete('http://localhost:5000/deleteslipper/'+id)
+    axios.delete('http://localhost:5000/slippers/'+id)
     .then(res =>{
       console.log(res);
       window.location.reload();
