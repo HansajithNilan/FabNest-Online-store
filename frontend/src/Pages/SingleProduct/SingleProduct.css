@@ -1,0 +1,100 @@
+.SingleProduct-wrapper{
+    z-index: 2;
+}
+
+  
+  .SingleProduct-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20vh;
+    
+  }
+  
+  .image-details {
+    display: flex;
+    justify-content: space-between;
+    width: 150vh;
+    margin: auto;
+  }
+  
+  .SingleProduct-image {
+    width: 40%;
+  }
+  
+  .SingleProduct-image img {
+    width: 100%;
+    border-radius: 1vh;
+    box-shadow: 0 0.4vh 1vh rgba(0, 0, 0, 0.2);
+  }
+  
+  .SingleProduct-like {
+    position: absolute;
+    top: 23vh;
+    right: 124vh;
+    cursor: pointer;
+    width: 3vh;
+    height: 3vh;
+    fill: red;
+    z-index: 1;
+   
+  }
+  
+  .SingleProduct-details {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .SingleProduct-details h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1vh;
+    margin-top: 3vh;
+    color: #800000;
+  }
+  
+  .SingleProduct-details h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 1vh;
+  }
+  
+  .SingleProduct-details button {
+    background: #007bff;
+    color: white;
+    padding: 1vh 2vh;
+    border: none;
+    border-radius: 0.5vh;
+    font-size: 1.2rem;
+    margin: 1vh 0;
+    cursor: pointer;
+  }
+  
+  .SingleProduct-details button:hover {
+    background: #0056b3;
+  }
+  
+  .free {
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .delevery {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .SingleProduct-description {
+    max-width: 80rem;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: #555;
+    margin-top: 2vh;
+    padding: 1vh;
+    border-top: 0.1vh solid #ddd;
+    font-weight: bold;
+  }
+  

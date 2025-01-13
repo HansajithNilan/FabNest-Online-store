@@ -1,0 +1,30 @@
+.topProduct-contain {
+   padding-top: 20vh;
+ 
+   
+   
+}
+
+.topProduct-contain h1{
+    font-family: "PT Serif", serif;
+    text-align: center;
+    padding-top: 5vh;
+    font-size: 3rem;
+    padding-bottom: 5vh;
+}
+
+.topProduct-cart{
+    margin: auto;
+    width: 100vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.topProduct-star{
+    height: 2vh;
+    width: 2vh;
+}
