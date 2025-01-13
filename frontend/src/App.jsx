@@ -16,6 +16,8 @@ import Forgotpswd from './Pages/Forgotpswd/Forgotpswd.jsx'
 import ContactUs from './Pages/ContactUsPage/ContactUs.jsx'
 import Users from './Pages/UserProfile/UserProfile.jsx'
 import UserUpdates from './Pages/UpdateUsers/UpdateUsers.jsx'
+import SingleProduct from './Pages/SingleProduct/SingleProduct.jsx'
+import TopProduct from './Pages/TopProduct/TopProduct.jsx'
 
 
 //Admin Pages
@@ -71,6 +73,9 @@ function App() {
     <Route path='/addslipper' element={<SlipperAdd/>}/>
     <Route path='/displayslippers' element={<DisplaySlipppers/>}/>
     <Route path='/updateslipper/:id' element={<UpdateSlippers/>}/>
+
+    <Route path='/singleproduct' element={<SingleProduct/>}/>
+    <Route path='/topproduct' element={<TopProduct/>}/>
 
     </Routes>
       

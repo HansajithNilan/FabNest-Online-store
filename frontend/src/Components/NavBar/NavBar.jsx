@@ -18,7 +18,7 @@ function NavBar() {
         <ul>
             <li><a href='/'>Home</a></li>
             <li><a href='/products'>Products</a></li>
-            <li><a href='#'>Top Products</a></li>
+            <li><a href='topproduct'>Top Products</a></li>
             <li><a href='/About'>About Us</a></li>
             <li><a href='/contactus'>Contact</a></li>
         </ul>
