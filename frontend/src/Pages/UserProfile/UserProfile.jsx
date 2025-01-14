@@ -11,14 +11,14 @@ function UserProfile() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getUsers")
+      .get("http://localhost:5000/user")
       .then((users) => setUsers(users.data))
       .catch((err) => console.log(err));
   }, []);
 
 
   const handleDelete = (id) => {
-    axios.delete('http://localhost:5000/deleteUser/' + id)
+    axios.delete('http://localhost:5000/user/' + id)
       .then(res => {
         console.log(res);
         window.location.reload();
