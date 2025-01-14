@@ -18,7 +18,7 @@ const navigate =useNavigate()
     
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getUsers/"+id)
+      .get("http://localhost:5000/user/"+id)
       .then((users) => {console.log(users)
         setName(users.data.name)
         setEmail(users.data.email)
@@ -32,7 +32,7 @@ const navigate =useNavigate()
   const UpdateButton =(e)=>{
     e.preventDefault()
     axios
-      .put('http://localhost:5000/updateuser/'+id, { name, email })
+      .put('http://localhost:5000/user/'+id, { name, email })
       .then((result) => {
         console.log(' User Update successful:', result.data);
         alert('User Update successful!');
