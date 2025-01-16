@@ -8,6 +8,7 @@ import Footer from "../../../../Components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 
 function AddProducts() {
+  const [image, setImage] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [color, setColor] = useState("");
@@ -17,9 +18,9 @@ function AddProducts() {
   const hanldesubmit = (e) => {
     e.preventDefault();
 
-    console.log({ name, price, color });
+    console.log({ name, price, color,image });
 
-    axios.post('http://localhost:5000/teddy',{name,price,color})
+    axios.post('http://localhost:5000/teddy',{name,price,color,image})
     .then((result)=>{
       console.log(" Teddy Bare Add SuccessFull ",result.data);
       alert(`${name}  Bare add successfull`);
@@ -38,7 +39,10 @@ function AddProducts() {
         <h1>TeddyBares Add Page</h1>
         <div className="product-add-form">
           <form className="form-content" onSubmit={hanldesubmit}>
-            <input type="file" accept="image/*"></input>
+            <input type="text" 
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            ></input>
             <br />
             <label>Product Name :</label>
             <br />
