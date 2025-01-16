@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const TeddaybareSchema= new mongoose.Schema({
     name:{
         type:String,
-        require:true,
+        require:[true,"Please Enter Product Name "],
     },
     price:{
         type:String,
@@ -12,7 +12,13 @@ const TeddaybareSchema= new mongoose.Schema({
     color:{
         type:String,
         require:true,
+    },
+    image:{
+        type:String,
     }
+},
+{
+    timestamps:true,
 })
 
 const TeddybareModel = mongoose.model("AddTeddyBares",TeddaybareSchema)

@@ -44,6 +44,7 @@ function ProductsPage() {
                 return(
                 <div className='teddy'>
                     <div className='teddy-img'>
+                    <img src={teddy.image} alt={teddy.name} style={{ width: "200px", height: "180px", borderRadius: "8px" }}/>
                     image
                     </div>
                     <div className='tedy-text'>
