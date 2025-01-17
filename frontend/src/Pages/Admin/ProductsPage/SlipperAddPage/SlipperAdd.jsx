@@ -9,13 +9,14 @@ function SlipperAdd() {
   const [category,setCategory] = useState("");
   const [price,setPrice] = useState("");
   const [size,setSize] = useState("");
+  const [image,setImage] = useState("");
   const navigate = useNavigate();
 
   const hanldesubmit = (e) => {
     e.preventDefault();
-    console.log({category,price,size});
+    console.log({category,price,size,image});
 
-    axios.post('http://localhost:5000/slippers',{category,price,size})
+    axios.post('http://localhost:5000/slippers',{category,price,size,image})
     .then((result) => {
       console.log("Slipper add succefull",result.data);
       alert(`${category} Add Successfull`);
@@ -37,7 +38,13 @@ function SlipperAdd() {
         <h1>Slippers Add Page</h1>
         <div className="product-add-form">
           <form className="form-content" onSubmit={hanldesubmit}>
-            <input type="file" accept="image/*"></input>
+          <label> Product Image :</label>
+            <br />
+            <input type="test"
+             value={image}
+             onChange={(e) => setImage(e.target.value)}
+             placeholder='Enter the URL for a image'
+             ></input>
             <br />
             <label>Product Category :</label>
             <br />

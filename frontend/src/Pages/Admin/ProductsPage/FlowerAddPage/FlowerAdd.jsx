@@ -9,15 +9,15 @@ function FlowerAdd() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [color, setColor] = useState("");
-
+  const [image,setImage] = useState("");
   const navigate = useNavigate();
 
   const hanldesubmit = (e) => {
     e.preventDefault();
 
-    console.log({ name, price, color });
+    console.log({ name, price, color,image });
 
-    axios.post('http://localhost:5000/flowers',{name,price,color})
+    axios.post('http://localhost:5000/flowers',{name,price,color,image})
     .then((result)=>{
       console.log(" Flower Add SuccessFull ",result.data);
       alert(`${name} add successfull`);
@@ -37,7 +37,13 @@ function FlowerAdd() {
         <h1>Flowers Add Page</h1>
         <div className="product-add-form">
           <form className="form-content" onSubmit={hanldesubmit}>
-            <input type="file" accept="image/*"></input>
+          <label> Product Image :</label>
+            <br />
+            <input type="text"
+             value={image}
+             onChange={(e)=>setImage(e.target.value)}
+             placeholder="Enter the URL for a Image"
+             ></input>
             <br />
             <label>Product Name :</label>
             <br />

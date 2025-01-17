@@ -12,6 +12,10 @@ const SlipperSchema = new mongoose.Schema({
     size:{
         type:String,
         require:true,
+    },
+    image:{
+        type:String,
+        require:true,
     }
 })
 

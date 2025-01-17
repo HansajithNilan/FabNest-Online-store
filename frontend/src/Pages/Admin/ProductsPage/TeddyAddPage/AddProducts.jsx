@@ -39,9 +39,12 @@ function AddProducts() {
         <h1>TeddyBares Add Page</h1>
         <div className="product-add-form">
           <form className="form-content" onSubmit={hanldesubmit}>
+          <label> Product Image :</label>
+            <br />
             <input type="text" 
             value={image}
             onChange={(e) => setImage(e.target.value)}
+            placeholder="Enter the URL for a image"
             ></input>
             <br />
             <label>Product Name :</label>

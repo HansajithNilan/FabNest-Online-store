@@ -6,7 +6,7 @@ import Footer from "../../Components/Footer/Footer.jsx"
 import "./ProductsPage.css"
 function ProductsPage() {
 
-    const [products,setProducts] = useState([]);
+    
     const [teddies,setTeddy] = useState([]);
     const [flowers,setFlowers] = useState([]);
     const [slippers,setSlippers] = useState([]);
@@ -45,7 +45,7 @@ function ProductsPage() {
                 <div className='teddy'>
                     <div className='teddy-img'>
                     <img src={teddy.image} alt={teddy.name} style={{ width: "200px", height: "180px", borderRadius: "8px" }}/>
-                    image
+                    
                     </div>
                     <div className='tedy-text'>
                     <p>Name : {teddy.name} </p>
@@ -69,7 +69,8 @@ function ProductsPage() {
                 return(
                 <div className='flowers'>
                     <div className='flower-img'>
-                    image
+                    <img src={flower.image} alt={flower.name} style={{ width: "200px", height: "180px", borderRadius: "8px" }}/>
+                    
                     </div>
                     <div className='flower-text'>
                     <p>Name : {flower.name} </p>
@@ -92,7 +93,8 @@ function ProductsPage() {
                 return(
                 <div className='slipper'>
                     <div className='slipper-img'>
-                    image
+                    <img src={slipper.image} alt={slipper.name} style={{ width: "200px", height: "180px", borderRadius: "8px" }}/>
+                    
                     </div>
                     <div className='slipper-text'>
                     <p>Category : {slipper.category} </p>

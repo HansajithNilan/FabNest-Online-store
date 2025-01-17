@@ -31,6 +31,7 @@ function DisplayFlowers() {
       <table className="user-table">
         <thead className="user-table-header">
           <tr>
+          <th className="user-table-header-cell">Image</th>
             <th className="user-table-header-cell">Name</th>
             <th className="user-table-header-cell">Price</th>
             <th className="user-table-header-cell">Color</th>
@@ -41,6 +42,7 @@ function DisplayFlowers() {
           {products.map((product) => {
             return (
               <tr className="user-table-row" key={product._id}>
+                <td className="user-table-cell"><img src={product.image} alt={product.name} style={{ width: "60px", height: "60px", borderRadius: "8px" }}/></td>
                 <td className="user-table-cell">{product.name}</td>
                 <td className="user-table-cell">{product.price}</td>
                 <td className="user-table-cell">{product.color}</td>
