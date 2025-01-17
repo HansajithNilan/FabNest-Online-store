@@ -12,6 +12,10 @@ const FlowerSchema= new mongoose.Schema({
     color:{
         type:String,
         require:true,
+    },
+    image:{
+        type:String,
+        require:true,
     }
 })
 
