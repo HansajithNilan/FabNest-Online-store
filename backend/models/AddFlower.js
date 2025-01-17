@@ -17,6 +17,9 @@ const FlowerSchema= new mongoose.Schema({
         type:String,
         require:true,
     }
+},
+{
+    timestamps:true,
 })
 
 const FlowerModel = mongoose.model("AddFlower",FlowerSchema)
