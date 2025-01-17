@@ -17,6 +17,9 @@ const SlipperSchema = new mongoose.Schema({
         type:String,
         require:true,
     }
+},
+{
+    timestamps:true,
 })
 
 const SlipperModel = mongoose.model("AddSlippers",SlipperSchema)

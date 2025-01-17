@@ -13,6 +13,9 @@ const RegisterSchema = new mongoose.Schema({
         type:String,
         require:true,
     }
+},
+{
+    timestamps:true,
 })
 
 const RegisterModel= mongoose.model("Users",RegisterSchema)
