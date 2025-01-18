@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavBar from "../../Components/NavBar/NavBar.jsx";
 import Footer from "../../Components/Footer/Footer.jsx";
 import "./ProductsPage.css";
+
 function ProductsPage() {
-  const navigate = useNavigate();
+ 
   const [teddies, setTeddy] = useState([]);
   const [flowers, setFlowers] = useState([]);
   const [slippers, setSlippers] = useState([]);
@@ -31,9 +32,7 @@ function ProductsPage() {
       .catch((err) => console.log(err));
   }, []);
 
-  const handleClick = () => {
-    navigate("/singleproduct");
-  };
+ 
 
   return (
     <div className="productsPage">
@@ -44,10 +43,10 @@ function ProductsPage() {
         <div className="teddybares">
           <h3>Teddy Bares</h3>
           <div className="product-contain">
-            <div className="teddybares-carts" onClick={handleClick}>
+            <div className="teddybares-carts">
               {teddies.map((teddy) => {
                 return (
-                  <div className="teddy">
+                  <Link to={`/singleproduct/${teddy._id}`}><div className="teddy">
                     <div className="teddy-img">
                       <img
                         src={teddy.image}
@@ -67,7 +66,7 @@ function ProductsPage() {
                       <p className="price">{teddy.price}</p>
                       <button>Buy Now</button>
                     </div>
-                  </div>
+                  </div></Link>
                 );
               })}
             </div>
@@ -77,10 +76,10 @@ function ProductsPage() {
         <div className="flowerWass">
           <h3>Flower Vass</h3>
           <div className="product-contain">
-            <div className="flowervass-carts" onClick={handleClick}>
+            <div className="flowervass-carts">
               {flowers.map((flower) => {
                 return (
-                  <div className="flowers">
+                  <Link to={`/singleproduct/${flower._id}`}><div className="flowers">
                     <div className="flower-img">
                       <img
                         src={flower.image}
@@ -100,7 +99,7 @@ function ProductsPage() {
                       <p className="price">{flower.price}</p>
                       <button>Buy Now</button>
                     </div>
-                  </div>
+                  </div></Link>
                 );
               })}
             </div>
@@ -110,10 +109,10 @@ function ProductsPage() {
         <div className="Slippers">
           <h3>Slippers</h3>
           <div className="product-contain">
-            <div className="Slippers-carts" onClick={handleClick}>
+            <div className="Slippers-carts" >
               {slippers.map((slipper) => {
                 return (
-                  <div className="slipper">
+                   <Link to={`/singleproduct/${slipper._id}`}><div className="slipper">
                     <div className="slipper-img">
                       <img
                         src={slipper.image}
@@ -133,7 +132,7 @@ function ProductsPage() {
                       <p className="price">{slipper.price}</p>
                       <button>Buy Now</button>
                     </div>
-                  </div>
+                    </div></Link>
                 );
               })}
             </div>

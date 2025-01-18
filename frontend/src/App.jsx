@@ -74,7 +74,7 @@ function App() {
     <Route path='/displayslippers' element={<DisplaySlipppers/>}/>
     <Route path='/updateslipper/:id' element={<UpdateSlippers/>}/>
 
-    <Route path='/singleproduct' element={<SingleProduct/>}/>
+    <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
     <Route path='/topproduct' element={<TopProduct/>}/>
 
     </Routes>

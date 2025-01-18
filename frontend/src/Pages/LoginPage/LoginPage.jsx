@@ -4,7 +4,7 @@ import "./LoginPage.css";
 import NavBar from "../../Components/NavBar/NavBar";
 import Footer from "../../Components/Footer/Footer";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
