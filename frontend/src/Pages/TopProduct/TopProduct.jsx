@@ -1,27 +1,200 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './TopProduct.css'
 import NavBar from '../../Components/NavBar/NavBar'
 import Footer from '../../Components/Footer/Footer'
+import axios from 'axios'
+import { Link } from "react-router-dom"
 
 function TopProduct() {
-  return (
-    <div className='topProduct-wrapper'>
-        <NavBar/>
-      <div className='topProduct-contain'>
-         <h1>Top Products</h1>
-         <div className='topProduct-cart'>
-            <h2>Name</h2>
-          <div className='topProduct-image'>
 
+  const [teddies, setTeddies] = useState([]);
+  const [flowers, setFlowers] = useState([]);
+  const [slippers, setSlippers] = useState([]);
+  const [minPrice, setMinPrice] = useState(100); // Default filter for price > 100
+  const [error, setError] = useState('');
+
+  const API_URL1 = 'http://localhost:5000/teddies';
+  const API_URL2 = 'http://localhost:5000/flower';
+  const API_URL3 = 'http://localhost:5000/slipper'; // Replace with your backend URL
+
+  const fetchFilteredTeddies = async (minPrice) => {
+  try {
+    const response = await axios.get(API_URL1, { params: { minPrice } });
+    return response.data;
+  } catch (error) {
+    throw error.response ? error.response.data : error.message;
+  }
+};
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const result = await fetchFilteredTeddies(minPrice);
+      setTeddies(result);
+      setError('');
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  fetchData();
+}, [minPrice]); // Re-fetch data whenever minPrice changes
+
+
+const fetchFilteredFlowers = async (minPrice) => {
+  try {
+    const response = await axios.get(API_URL2, { params: { minPrice } });
+    return response.data;
+  } catch (error) {
+    throw error.response ? error.response.data : error.message;
+  }
+};
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const result = await fetchFilteredFlowers(minPrice);
+      setFlowers(result);
+      setError('');
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  fetchData();
+}, [minPrice]); // Re-fetch data whenever minPrice changes
+
+
+
+const fetchFilteredSlippers = async (minPrice) => {
+  try {
+    const response = await axios.get(API_URL3, { params: { minPrice } });
+    return response.data;
+  } catch (error) {
+    throw error.response ? error.response.data : error.message;
+  }
+};
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const result = await fetchFilteredSlippers(minPrice);
+      setSlippers(result);
+      setError('');
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  fetchData();
+}, [minPrice]); // Re-fetch data whenever minPrice changes
+
+
+  return (
+    <div className='productsPage'>
+        <NavBar/>
+        <div className='pagecontent'>
+           <h1>Top Products</h1>
+      <ul>
+      <div className="teddybares">
+          <h3>Teddy Bares</h3>
+          <div className="product-contain">
+            <div className="teddybares-carts">
+              {teddies.map((teddy) => {
+                return (
+                  <Link to={`/singleproduct/${teddy._id}`}><div className="teddy">
+                    <div className="teddy-img">
+                      <img
+                        src={teddy.image}
+                        alt={teddy.name}
+                        style={{
+                          width: "200px",
+                          height: "180px",
+                          borderRadius: "8px",
+                        }}
+                      />
+                    </div>
+                    <div className="tedy-text">
+                      <p className="name">{teddy.name} </p>
+                      <p className="color">{teddy.color} color</p>
+                    </div>
+                    <div className="tedy-buy">
+                      <p className="price">${teddy.price}</p>
+                      <button>Buy Now</button>
+                    </div>
+                  </div></Link>
+                );
+              })}
+            </div>
           </div>
-          <div className='topProduct-details'>
-            <p>price</p>
-            <p>color</p>
+        </div>
+
+        <div className="flowerWass">
+          <h3>Flower Vass</h3>
+          <div className="product-contain">
+            <div className="flowervass-carts">
+              {flowers.map((flower) => {
+                return (
+                  <Link to={`/singleproduct/${flower._id}`}><div className="flowers">
+                    <div className="flower-img">
+                      <img
+                        src={flower.image}
+                        alt={flower.name}
+                        style={{
+                          width: "200px",
+                          height: "180px",
+                          borderRadius: "8px",
+                        }}
+                      />
+                    </div>
+                    <div className="flower-text">
+                      <p className="name">{flower.name} flower  bouquet </p>
+                      <p className="color">{flower.color} color</p>
+                    </div>
+                    <div className="flower-buy">
+                      <p className="price">${flower.price}</p>
+                      <button>Buy Now</button>
+                    </div>
+                  </div></Link>
+                );
+              })}
+            </div>
           </div>
-          <div className='topProduct-star'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+        </div>
+
+        <div className="Slippers">
+          <h3>Slippers</h3>
+          <div className="product-contain">
+            <div className="Slippers-carts" >
+              {slippers.map((slipper) => {
+                return (
+                   <Link to={`/singleproduct/${slipper._id}`}><div className="slipper">
+                    <div className="slipper-img">
+                      <img
+                        src={slipper.image}
+                        alt={slipper.name}
+                        style={{
+                          width: "200px",
+                          height: "180px",
+                          borderRadius: "8px",
+                        }}
+                      />
+                    </div>
+                    <div className="slipper-text">
+                      <p className="name">Category : {slipper.category} </p>
+                      <p className="color">Size: {slipper.size}</p>
+                    </div>
+                    <div className="slipper-buy">
+                      <p className="price">${slipper.price}</p>
+                      <button>Buy Now</button>
+                    </div>
+                    </div></Link>
+                );
+              })}
+            </div>
           </div>
-         </div>
+        </div>
+      </ul>
       </div>
         <Footer/>
     </div>

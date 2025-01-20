@@ -9,7 +9,7 @@ function UpdateSlippers() {
 
     const{id} = useParams()
     const[category,setCategory] = useState('');
-    const[price,setPrice] = useState('');
+    const[price,setPrice] = useState();
     const[size,setSize] = useState('');
 
     const navigate = useNavigate()
@@ -60,7 +60,7 @@ function UpdateSlippers() {
           <label>Product Price :</label>
           <br />
           <input
-            type="text"
+            type="Number"
             placeholder="Enter product price"
             value={price}
             onChange={(e)=>setPrice(e.target.value)}

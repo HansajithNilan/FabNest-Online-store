@@ -6,7 +6,7 @@ const TeddaybareSchema= new mongoose.Schema({
         require:[true,"Please Enter Product Name "],
     },
     price:{
-        type:String,
+        type:Number,
         require:true,
     },
     color:{
