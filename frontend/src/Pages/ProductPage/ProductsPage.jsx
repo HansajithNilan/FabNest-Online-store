@@ -63,7 +63,7 @@ function ProductsPage() {
                       <p className="color">{teddy.color} color</p>
                     </div>
                     <div className="tedy-buy">
-                      <p className="price">{teddy.price}</p>
+                      <p className="price">${teddy.price}</p>
                       <button>Buy Now</button>
                     </div>
                   </div></Link>
@@ -96,7 +96,7 @@ function ProductsPage() {
                       <p className="color">{flower.color} color</p>
                     </div>
                     <div className="flower-buy">
-                      <p className="price">{flower.price}</p>
+                      <p className="price">${flower.price}</p>
                       <button>Buy Now</button>
                     </div>
                   </div></Link>
@@ -129,7 +129,7 @@ function ProductsPage() {
                       <p className="color">Size: {slipper.size}</p>
                     </div>
                     <div className="slipper-buy">
-                      <p className="price">{slipper.price}</p>
+                      <p className="price">${slipper.price}</p>
                       <button>Buy Now</button>
                     </div>
                     </div></Link>

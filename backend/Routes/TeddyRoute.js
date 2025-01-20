@@ -6,14 +6,17 @@ import { createTeddy,getTeddy,deleteTeddy,getbyIdTeddy,putTeddy } from '../contr
 
 const router = express.Router();
 
-router.post('/',createTeddy)
+  router.post('/',createTeddy)
   
   router.get('/',getTeddy)
   
-  router.delete('/:id',deleteTeddy)
+ // router.delete('/:id',deleteTeddy)
 
   router.get('/:id',getbyIdTeddy)
   
   router.put('/:id',putTeddy)
+
+ 
+ 
 
   export default router;

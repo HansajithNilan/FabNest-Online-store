@@ -20,6 +20,7 @@ import SingleProduct from './Pages/SingleProduct/SingleProduct.jsx'
 import TopProduct from './Pages/TopProduct/TopProduct.jsx'
 
 
+
 //Admin Pages
 
 //Teddy Bares Part
@@ -76,6 +77,7 @@ function App() {
 
     <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
     <Route path='/topproduct' element={<TopProduct/>}/>
+   
 
     </Routes>
       

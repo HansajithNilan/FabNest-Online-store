@@ -44,7 +44,7 @@ function DisplaySlipper() {
               <tr className="user-table-row" key={product._id}>
                 <td className="user-table-cell"><img src={product.image} alt={product.name} style={{ width: "60px", height: "60px", borderRadius: "8px" }}/></td>
                 <td className="user-table-cell">{product.category}</td>
-                <td className="user-table-cell">{product.price}</td>
+                <td className="user-table-cell">{product.price}$</td>
                 <td className="user-table-cell">{product.size}</td>
                 <td className="user-table-cell">
                   <a href className="user-update-link">

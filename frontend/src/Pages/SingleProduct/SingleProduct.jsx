@@ -11,7 +11,7 @@ function SingleProduct() {
 
   const{id} = useParams()
   const[name,setName] = useState('');
-  const[price,setPrice] = useState('');
+  const[price,setPrice] = useState();
   const[color,setColor] = useState('');
   const[image,setImage] = useState('');
 
@@ -63,7 +63,7 @@ useEffect(()=>{
             <div className='SingleProduct-details'>
               <h1>{name}</h1><br/><br/>
               <h2>{color}</h2><br/>
-              <h3>{price}</h3><br/><br/>
+              <h3>${price}</h3><br/><br/>
               <label className='label'>Quantity : </label>
               <select className='quantity'>
                 <option>Select</option>
@@ -75,7 +75,7 @@ useEffect(()=>{
               </select><br/>
               <p className='free'>FREE</p>
               <p className='delevery'>DELIVERY</p><br/>
-              <button>Add To Cart</button>
+              <button>Buy Now</button>
             </div>
          </div>
          <div className='SingleProduct-description'>

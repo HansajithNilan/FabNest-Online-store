@@ -1,30 +1,147 @@
-.topProduct-contain {
-   padding-top: 20vh;
- 
-   
-   
+@import url("https://fonts.googleapis.com/css2?family=Mogra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mogra&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.productsPage {
+  background-color: rgb(237, 237, 237);
 }
 
-.topProduct-contain h1{
-    font-family: "PT Serif", serif;
-    text-align: center;
-    padding-top: 5vh;
-    font-size: 3rem;
-    padding-bottom: 5vh;
+.pagecontent {
+  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  background-color: rgb(237, 237, 237);
 }
 
-.topProduct-cart{
-    margin: auto;
-    width: 100vh;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    background-color: aliceblue;
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.pagecontent h1 {
+  font-family: "PT Serif", serif;
+  text-align: center;
+  padding-top: 17vh;
+  font-size: 2.5rem;
 }
 
-.topProduct-star{
-    height: 2vh;
-    width: 2vh;
+.teddybares,
+.flowerWass,
+.Slippers {
+  margin-top: 5vh;
+}
+
+.product-contain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.teddybares-carts,
+.flowervass-carts,
+.Slippers-carts {
+  width: 70%;
+  max-width: 100rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.teddy,
+.flowers,
+.slipper {
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  /* flex: 1 1 calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);*/
+}
+
+.teddy img,
+.flowers img,
+.slipper img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.tedy-buy,
+.flower-buy,
+.slipper-buy {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.price {
+  color: red;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+button {
+  color: white;
+  background-color: black;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: red;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.color {
+  color: rgb(27, 26, 26);
+  margin-top: 0.5rem;
+}
+
+.pagecontent h3 {
+  font-size: 1.8rem;
+  padding-left: 36vh;
+  padding-bottom: 1vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .teddy,
+  .flowers,
+  .slipper {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+  }
+
+  .pagecontent h1 {
+    font-size: 2rem;
+  }
+
+  .pagecontent h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .teddy,
+  .flowers,
+  .slipper {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .pagecontent h1 {
+    font-size: 1.8rem;
+  }
+
+  .pagecontent h3 {
+    font-size: 1.2rem;
+  }
 }

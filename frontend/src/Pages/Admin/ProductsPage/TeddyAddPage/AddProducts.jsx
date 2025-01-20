@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 function AddProducts() {
   const [image, setImage] = useState("");
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
+  const [price, setPrice] = useState();
   const [color, setColor] = useState("");
 
   const navigate = useNavigate();
@@ -59,7 +59,7 @@ function AddProducts() {
             <label>Product Price :</label>
             <br />
             <input
-              type="text"
+              type="Number"
               placeholder="Enter product price"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
