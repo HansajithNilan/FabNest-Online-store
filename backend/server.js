@@ -10,6 +10,7 @@ import UserRoute from "./Routes/UserRoute.js";
 import Teddy from "./Routes/Teddy.js";
 import Flower from "./Routes/Flower.js";
 import Slipper from "./Routes/Slipper.js";
+import { generateToken } from "./jwt/generatetoken.js";
 
 
 const app = express();
@@ -36,9 +37,25 @@ app.listen(5000, () => {
 //post method
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
-  RegisterModel.findOne({ email: email }).then((user) => {
+    RegisterModel.findOne({ email: email })
+  
+  .then((user) => {
     if (user) {
+     
+console.log({user:user.name})
       if (user.password === password) {
+
+      const payload = {
+        email: email,
+        
+      }
+
+     
+      const token = generateToken(payload)
+      console.log('Gennerated Token :',token)
+
+      
+
         res.json("Success");
       } else {
         res.json("the password is incorrect");
@@ -48,6 +65,5 @@ app.post("/login", (req, res) => {
     }
   });
 });
-
 
 
