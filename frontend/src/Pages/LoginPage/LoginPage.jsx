@@ -9,22 +9,29 @@ import { Link, useNavigate } from "react-router-dom";
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); //Use the hook correctly here
+  const [user, setUser] = useState([]);
+
+  const navigate = useNavigate(); // Use the hook correctly here
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log({email,password});
+    console.log({ email, password });
 
     axios
-
       .post("http://localhost:5000/login", { email, password })
-
       .then((result) => {
+        setUser(result.data);
+
         console.log(result);
-        if (result.data === "Success") {
-          alert("Login successful!");
-          navigate('/'); // Use the navigate function here
+
+        if (result.data.user.role === "user") {
+          navigate(`/products/${result.data.user.id}`); // Navigate to home for users
+        } else if (
+          result.data.user.role === "admin" &&
+          result.data.user.email === "admin@gmail.com"
+        ) {
+          navigate(`/AdminDashboard/${result.data.user.id}`); // Navigate to admin dashboard
         }
       })
       .catch((err) => {
@@ -62,8 +69,9 @@ function LoginPage() {
                 required
               />
               <br />
-
-              <button type="submit">Sign In</button>
+              <button type="submit">
+                Sign In
+              </button>
               <br />
             </form>
 
@@ -78,12 +86,13 @@ function LoginPage() {
             <h1>
               --------------------- New to our community ---------------------
             </h1>
-          <a href="/UserRegister">
-            <button>Create an Account</button>
-            </a>
+            <Link to="/UserRegister">
+              <button>Create an Account</button>
+            </Link>
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

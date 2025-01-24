@@ -23,6 +23,9 @@ import TopProduct from './Pages/TopProduct/TopProduct.jsx'
 
 //Admin Pages
 
+//admin dashboard
+import AdminDashboard from './Pages/Admin/admindashboard/admindashboard.jsx'
+
 //Teddy Bares Part
 import AddTeddybares from './Pages/Admin/ProductsPage/TeddyAddPage/AddProducts.jsx'
 import DisplayTeddy from './Pages/Admin/ProductsPage/DisplayTeddybares/DisplayTeddy.jsx'
@@ -52,7 +55,7 @@ function App() {
 
     
     <Route path='/Footer' element={<Footer/>}/>
-    <Route path='/products' element={<ProductsPage/>}/>
+    <Route path='/products/:id' element={<ProductsPage/>}/>
 
 
     <Route path='/About' element={<About/>}/>
@@ -77,6 +80,8 @@ function App() {
 
     <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
     <Route path='/topproduct' element={<TopProduct/>}/>
+
+    <Route path='/admindashboard/:id' element={<AdminDashboard/>}/>
    
 
     </Routes>
