@@ -1,6 +1,6 @@
 import express from "express";
 import { connectDB } from "./config/db.js";
-import mongoose from "mongoose";
+import mongoose, { get } from "mongoose";
 import cors from "cors";
 import RegisterModel from "./models/UserRegister.js";
 import TeddyRoutes from "./Routes/TeddyRoute.js";
@@ -11,7 +11,8 @@ import Teddy from "./Routes/Teddy.js";
 import Flower from "./Routes/Flower.js";
 import Slipper from "./Routes/Slipper.js";
 import { generateToken } from "./jwt/generatetoken.js";
-
+import admin from "./admin/admin.js";
+import { LogInFunction } from "./jwt/LogIn.js";
 
 const app = express();
 app.use(express.json());
@@ -25,9 +26,7 @@ app.use("/slippers", SlippersRoutes);
 app.use("/flowers", FlowerRoutes);
 app.use("/user", UserRoute);
 
-
-
-process.env.MONGO_URL
+process.env.MONGO_URL;
 
 app.listen(5000, () => {
   connectDB();
@@ -37,26 +36,25 @@ app.listen(5000, () => {
 //post method
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
-    RegisterModel.findOne({ email: email })
-  
-  .then((user) => {
+  RegisterModel.findOne({ email: email }).then((user) => {
     if (user) {
-     
-console.log({user:user.name})
       if (user.password === password) {
+        const payload = {
+          email: email,
+        };
 
-      const payload = {
-        email: email,
-        
-      }
+        const token = generateToken(payload);
 
-     
-      const token = generateToken(payload)
-      console.log('Gennerated Token :',token)
-
-      
-
-        res.json("Success");
+        res.json({
+          message: "Success",
+          user: {
+            id: user._id,
+            name: user.name,
+            email: user.email,
+            role: user.role,
+            token: token,
+          },
+        });
       } else {
         res.json("the password is incorrect");
       }
@@ -66,4 +64,28 @@ console.log({user:user.name})
   });
 });
 
+// app.post('/adminlogin',async(req,res)=>{
+//   const {email,password}= req.body;
 
+//  const user =await RegisterModel.findOne({email:email})
+
+//  if(!user){
+//   admin()
+//   res.status(400).send({message:"Admin Account Created Successfull"})
+//   console.error("Admin Account Created")
+//  }
+//  else{
+//   if(user.email==="admin@gmail.com" && user.password === "admin"){
+//     res.send({
+//       _id:user._id,
+//       name:user.name,
+//       email:user.email,
+//       role:user.role,
+
+//     })
+//   }
+//   else{
+
+//   }
+//  }
+// })

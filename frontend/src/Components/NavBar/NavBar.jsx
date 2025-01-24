@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import './NavBar.css'
+import { LogInFunction } from '../../../../backend/jwt/LogIn'
 
-function NavBar() {
+
+function NavBar({name}) {
+
+
+
+
   return (
     
     <div className='Navbar-container'>
@@ -21,21 +27,32 @@ function NavBar() {
             <li><a href='topproduct'>Top Products</a></li>
             <li><a href='/About'>About Us</a></li>
             <li><a href='/contactus'>Contact</a></li>
+            
         </ul>
         </div>
-        <div className='buttons'>
-            <div className='Login-button'>
-                <a href='/Login'>
-                <button>Login</button>
-                </a>
-            </div>
-            <div className='Register-button'>
-               <a href='/UserRegister'>
-                <button >Register</button>
-                </a>
-            </div>
-        </div>
+      
 
+
+
+
+  <div className='buttons'>
+    <h3> {name}</h3>
+  <div className='Login-button'>
+      <a href='/Login'>
+      <button>Login</button>
+      </a>
+  </div>
+  <div className='Register-button'>
+     <a href='/UserRegister'>
+      <button >Register</button>
+      </a>
+  </div>
+  
+</div>
+
+
+
+      
 
         
      

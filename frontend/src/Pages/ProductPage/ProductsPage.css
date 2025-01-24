@@ -12,13 +12,20 @@
   background-color: rgb(237, 237, 237);
 }
 
-.pagecontent h1 {
-  font-family: "PT Serif", serif;
-  text-align: center;
-  padding-top: 17vh;
-  font-size: 2.5rem;
-}
 
+.welcome-text{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.pagecontent h2{
+  font-family: "PT Serif", serif;
+  
+
+ 
+
+}
 .teddybares,
 .flowerWass,
 .Slippers {
@@ -107,7 +114,7 @@ button:hover {
 
 .pagecontent h3 {
   font-size: 1.8rem;
-  padding-left: 36vh;
+ 
   padding-bottom: 1vh;
 }
 

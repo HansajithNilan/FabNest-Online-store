@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import NavBar from "../../Components/NavBar/NavBar.jsx";
 import Footer from "../../Components/Footer/Footer.jsx";
 import "./ProductsPage.css";
 
 function ProductsPage() {
+
+  const {id} = useParams();
  
   const [teddies, setTeddy] = useState([]);
   const [flowers, setFlowers] = useState([]);
   const [slippers, setSlippers] = useState([]);
+
+  const [name,setName] = useState('');
 
   useEffect(() => {
     axios
@@ -32,11 +36,18 @@ function ProductsPage() {
       .catch((err) => console.log(err));
   }, []);
 
+
+useEffect(()=>{
+
+axios.get(`http://localhost:5000/user/${id}`)
+.then((result)=>setName(result.data.name))
+.catch((err)=>console.log(err))
+})
  
 
   return (
     <div className="productsPage">
-      <NavBar />
+      <NavBar name={name} />
       <div className="pagecontent">
         <h1>Products</h1>
 
