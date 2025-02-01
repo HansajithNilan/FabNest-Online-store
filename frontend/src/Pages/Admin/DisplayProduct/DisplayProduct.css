@@ -1,0 +1,30 @@
+.displayProduct-contain{
+    width: 150vh;
+    margin-bottom: 5vh;
+}
+
+.displayProduct-contain ul{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.displayProduct-contain li{
+    list-style: none;
+    margin: auto;
+    padding: 1.5vh;
+    font-weight: bold;
+    background-color: rgb(93, 190, 228);
+    width: 50vh;
+    border-right: 1px solid black;
+}
+
+.displayProduct-contain li a{
+    color: black;
+   margin-left: 17vh;
+}
+
+.displayProduct-contain li:hover{
+    background-color: rgb(36, 165, 216); 
+    
+}

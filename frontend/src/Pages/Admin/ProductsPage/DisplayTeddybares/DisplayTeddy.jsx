@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
+import DisplayProduct from '../../DisplayProduct/DisplayProduct'
 import NavBar from '../../../../Components/NavBar/NavBar'
 import Footer from '../../../../Components/Footer/Footer'
 import './DisplayTeddy.css'
+import SideBar from '../../sideBar/SideBar'
 function DisplayTeddy() {
 
     const [products,setProducts] = useState([])
@@ -26,7 +27,9 @@ function DisplayTeddy() {
   return (
     <div className="user-profile-wrapper">
       <NavBar/>
+      <SideBar/>
     <div className="user-profile-container">
+      <DisplayProduct/>
         <h1>Teddy Bares Collecion</h1>
       <table className="user-table">
         <thead className="user-table-header">

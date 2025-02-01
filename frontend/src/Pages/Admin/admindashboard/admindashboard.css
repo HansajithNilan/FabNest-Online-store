@@ -1,0 +1,25 @@
+.count-container{
+    padding: 20vh 30vh;
+}
+
+.count-container h1{
+    display: flex;
+   justify-content: center;
+   margin-bottom: 5vh;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2vh 0;
+}
+
+.stats-card{
+    padding: 1.5vh 7vh;
+}
+
+.stats-card p{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5vh;
+}

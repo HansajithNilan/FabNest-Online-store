@@ -3,6 +3,8 @@ import axios from 'axios'
 import NavBar from '../../../../Components/NavBar/NavBar'
 import Footer from '../../../../Components/Footer/Footer'
 import './DisplayFlowers.css'
+import DisplayProduct from '../../DisplayProduct/DisplayProduct'
+import SideBar from '../../sideBar/SideBar'
 
 function DisplayFlowers() {
   const [products,setProducts] = useState([])
@@ -26,7 +28,9 @@ function DisplayFlowers() {
   return (
     <div className="user-profile-wrapper">
       <NavBar/>
+      <SideBar/>
     <div className="user-profile-container">
+      <DisplayProduct/>
         <h1>Flowers Collecion</h1>
       <table className="user-table">
         <thead className="user-table-header">

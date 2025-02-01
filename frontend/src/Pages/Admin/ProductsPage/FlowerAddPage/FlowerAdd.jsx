@@ -4,6 +4,8 @@ import NavBar from "../../../../Components/NavBar/NavBar";
 import Footer from "../../../../Components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import './FlowerAdd.css'
+import AddProduct from "../../AddProduct/AddProduct";
+import SideBar from "../../sideBar/SideBar";
 
 function FlowerAdd() {
   const [name, setName] = useState("");
@@ -33,7 +35,9 @@ function FlowerAdd() {
     <div>
       <div className="product-add-page">
       <NavBar />
+      <SideBar/>
       <div className="product-add-content">
+        <AddProduct/>
         <h1>Flowers Add Page</h1>
         <div className="product-add-form">
           <form className="form-content" onSubmit={hanldesubmit}>
