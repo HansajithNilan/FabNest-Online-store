@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import AddProduct from "../../AddProduct/AddProduct";
+import SideBar from "../../sideBar/SideBar";
 import "./AddProducts.css";
 
 import NavBar from "../../../../Components/NavBar/NavBar";
@@ -35,7 +36,9 @@ function AddProducts() {
   return (
     <div className="product-add-page">
       <NavBar />
+      <SideBar/>
       <div className="product-add-content">
+      <AddProduct/>
         <h1>TeddyBares Add Page</h1>
         <div className="product-add-form">
           <form className="form-content" onSubmit={hanldesubmit}>

@@ -3,6 +3,8 @@ import './DisplaySlipper.css'
 import axios from 'axios';
 import NavBar from '../../../../Components/NavBar/NavBar';
 import Footer from '../../../../Components/Footer/Footer';
+import DisplayProduct from '../../DisplayProduct/DisplayProduct';
+import SideBar from '../../sideBar/SideBar'
 
 function DisplaySlipper() {
 
@@ -26,7 +28,9 @@ function DisplaySlipper() {
   return (
     <div>
       <NavBar/>
+      <SideBar/>
     <div className="user-profile-container">
+      <DisplayProduct/>
         <h1>Slippers Collecion</h1>
       <table className="user-table">
         <thead className="user-table-header">

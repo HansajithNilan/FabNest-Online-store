@@ -41,7 +41,7 @@ import SlipperAdd from './Pages/Admin/ProductsPage/SlipperAddPage/SlipperAdd.jsx
 import DisplaySlipppers from './Pages/Admin/ProductsPage/DisplaySlipper/DisplaySlipper.jsx'
 import UpdateSlippers from './Pages/Admin/ProductsPage/UpdateSlippers/UpdateSlippers.jsx'
 
-
+import SideBar from './Pages/Admin/sideBar/SideBar.jsx'
 
 function App() {
 
@@ -82,6 +82,8 @@ function App() {
     <Route path='/topproduct' element={<TopProduct/>}/>
 
     <Route path='/admindashboard/:id' element={<AdminDashboard/>}/>
+    <Route path='/sidebar' element={<SideBar/>}/>
+    
    
 
     </Routes>

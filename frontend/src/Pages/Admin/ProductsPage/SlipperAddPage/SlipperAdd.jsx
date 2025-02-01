@@ -4,6 +4,8 @@ import NavBar from '../../../../Components/NavBar/NavBar'
 import Footer from '../../../../Components/Footer/Footer'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import AddProduct from "../../AddProduct/AddProduct";
+import SideBar from "../../sideBar/SideBar";
 
 function SlipperAdd() {
   const [category,setCategory] = useState("");
@@ -34,7 +36,9 @@ function SlipperAdd() {
     <div>
       <div className="product-add-page">
       <NavBar />
+      <SideBar/>
       <div className="product-add-content">
+        <AddProduct/>
         <h1>Slippers Add Page</h1>
         <div className="product-add-form">
           <form className="form-content" onSubmit={hanldesubmit}>
