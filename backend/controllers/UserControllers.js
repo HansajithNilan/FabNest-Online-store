@@ -3,6 +3,7 @@ import RegisterModel from "../models/UserRegister.js";
 export const createUser = async(req, res) => {
     try{
       const user = await RegisterModel.create(req.body);
+      
       res.status(200).json(user);
     }catch{
       res.status(500).json({message:error.message})
@@ -23,7 +24,7 @@ export const getUser = async(req, res) => {
   
 export const deleteUser = async(req, res) => {
     try{
-       const {id} = req.params;
+       const {id} = req.params; //used to accessing route parameters in Express.js
        const user = await RegisterModel.findByIdAndDelete(id);
        res.status(200).json({message:"user is deleted."})
     }catch{

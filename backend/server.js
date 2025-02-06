@@ -10,9 +10,8 @@ import UserRoute from "./Routes/UserRoute.js";
 import Teddy from "./Routes/Teddy.js";
 import Flower from "./Routes/Flower.js";
 import Slipper from "./Routes/Slipper.js";
-import { generateToken } from "./jwt/generatetoken.js";
-import admin from "./admin/admin.js";
-import { LogInFunction } from "./jwt/LogIn.js";
+import CreateToken from './jwt/generatetoken.js'
+
 
 const app = express();
 app.use(express.json());
@@ -33,6 +32,7 @@ app.listen(5000, () => {
   console.log("Server Started at http://localhost:5000");
 });
 
+
 //post method
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
@@ -43,7 +43,13 @@ app.post("/login", (req, res) => {
           email: email,
         };
 
-        const token = generateToken(payload);
+
+      const token = CreateToken(user._id)
+
+      res.cookie("token", token, {
+        withCredentials: true,
+        httpOnly: false,
+      });
 
         res.json({
           message: "Success",
@@ -52,9 +58,13 @@ app.post("/login", (req, res) => {
             name: user.name,
             email: user.email,
             role: user.role,
-            token: token,
+            
           },
+
+          
         });
+
+     
       } else {
         res.json("the password is incorrect");
       }
@@ -62,6 +72,16 @@ app.post("/login", (req, res) => {
       res.json("No record existed");
     }
   });
+
+  
+});
+
+
+
+
+app.post("/logout", (req, res) => {
+ res.clearCookie('token');
+ res.json({message:"Logout successfull"})
 });
 
 // app.post('/adminlogin',async(req,res)=>{
@@ -89,3 +109,5 @@ app.post("/login", (req, res) => {
 //   }
 //  }
 // })
+
+

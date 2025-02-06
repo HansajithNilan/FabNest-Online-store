@@ -1,14 +1,13 @@
-import jwt from 'jsonwebtoken';
+
+import 'dotenv/config'
+
+import jwt  from "jsonwebtoken"
 
 
 
-export const generateToken = (payload)=>{
-    const token = jwt.sign(payload,'nilan')
-    return token;
+  const createtoken =(id)=>{
+    return jwt.sign ({id},process.env.SECRET_KEY,{expiresIn: 3 * 24 * 60 * 60,} )
+
 }
 
-export const decodeToken = (token)=>{
-    const decode  = jwt.decode(token)
-
-    return decode;
-}
+export default createtoken
