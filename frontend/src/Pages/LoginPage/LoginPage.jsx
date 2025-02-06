@@ -5,17 +5,20 @@ import NavBar from "../../Components/NavBar/NavBar";
 import Footer from "../../Components/Footer/Footer";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../Components/AuthContext";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState([]);
+  const {login} =useContext(AuthContext)
 
   const navigate = useNavigate(); // Use the hook correctly here
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    login(email, password);
     console.log({ email, password });
 
     axios

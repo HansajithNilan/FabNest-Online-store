@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react'
-
+import { useNavigate } from "react-router-dom";
 import './NavBar.css'
-import { LogInFunction } from '../../../../backend/jwt/LogIn'
+import { useCookies } from 'react-cookie';
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../AuthContext.jsx";
+
+function NavBar() {
 
 
-function NavBar({name}) {
-
-
+const { user, logout } = useContext(AuthContext);
 
 
   return (
@@ -37,16 +40,14 @@ function NavBar({name}) {
 
   <div className='buttons'>
     <h3> {name}</h3>
-  <div className='Login-button'>
-      <a href='/Login'>
-      <button>Login</button>
-      </a>
-  </div>
-  <div className='Register-button'>
-     <a href='/UserRegister'>
-      <button >Register</button>
-      </a>
-  </div>
+    {!user ?(
+        <Link to="/login" className='Login-button' ><button className='Login-button'>Login</button></Link>
+ 
+    ):(
+      <Link to="/" className='Login-button' ><button className='Login-button' onClick={logout}>Logout</button></Link>
+    )}
+
+
   
 </div>
 
