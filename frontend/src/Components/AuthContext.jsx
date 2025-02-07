@@ -5,11 +5,20 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-
+    
     useEffect(() => {
         const token = localStorage.getItem("token");
         if (token) {
-            setUser(true); // User is logged in
+            axios.get("http://localhost:5000/me", { 
+                headers: { Authorization: `Bearer ${token}` } 
+            })
+            .then((res) => {
+                setUser(res.data); // Set the user object if the token is valid
+            })
+            .catch(() => {
+                localStorage.removeItem("token"); // Remove invalid token
+                setUser(null);
+            });
         }
     }, []);
 
@@ -17,7 +26,7 @@ export const AuthProvider = ({ children }) => {
         try {
             const res = await axios.post("http://localhost:5000/login", { email, password });
             localStorage.setItem("token", res.data.token);
-            setUser(true);
+            setUser(res.data.user); // Store user details
         } catch (error) {
             console.error(error.response.data);
         }
