@@ -42,7 +42,7 @@ function UserRegister() {
         <div className="RegBox">
           <h1>Create an account</h1>
           <p>
-            Already have an account? <a href="#">Log in</a>
+            Already have an account? <a href="/Login">Log in</a>
           </p>
           <form onSubmit={handleSubmit}>
             <label>What should we call you?</label>
