@@ -4,7 +4,7 @@ import "./LoginPage.css";
 import NavBar from "../../Components/NavBar/NavBar";
 import Footer from "../../Components/Footer/Footer";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Components/AuthContext";
 
@@ -12,7 +12,7 @@ function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState([]);
-  const {login} =useContext(AuthContext)
+  const { login } = useContext(AuthContext);
 
   const navigate = useNavigate(); // Use the hook correctly here
 
@@ -54,6 +54,7 @@ function LoginPage() {
               <label>Email:</label>
               <br />
               <input
+                className="email"
                 type="email"
                 placeholder="Enter your email address"
                 value={email}
@@ -72,26 +73,16 @@ function LoginPage() {
                 required
               />
               <br />
-              <button type="submit">
-                Sign In
-              </button>
+              <h3><a href="#">Forgot your password?</a></h3>
+              <button type="submit">Sign In</button>
               <br />
             </form>
-
-            <h2>
-              <input type="checkbox" />
-              By creating, you agree to the Terms of Use and Privacy Policy
-            </h2>
-
-            <h3>Forgot your password?</h3>
           </div>
           <div className="newtotag">
             <h1>
-              --------------------- New to our community ---------------------
+              Don't have an account? <a href="/UserRegister"> Sign up</a>
             </h1>
-            <Link to="/UserRegister">
-              <button>Create an Account</button>
-            </Link>
+            
           </div>
         </div>
       </div>
